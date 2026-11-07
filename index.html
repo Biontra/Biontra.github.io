@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kaan Yunus Emre Akgöz</title>
+  <meta name="description" content="Computer science student at Kadir Has University. Projects I build to automate my own day.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="wrap top">
+    <h1>Kaan Yunus Emre Akgöz</h1>
+    <p class="lead">First-year computer science student at Kadir Has University, Istanbul.
+      Most of what I build starts as a problem in my own day: missed deadlines, too many AI apps, repetitive clicks.</p>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section id="about">
+      <h2>About</h2>
+      <p>I write most of my code together with AI coding tools (Claude Code, Codex).
+        What I try to own is the part they can't do for me: deciding what the tool should do,
+        checking that it actually works, and fixing it when it doesn't.</p>
+      <p>Right now I'm interested in AI agents, automation and security.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <article class="card">
+        <h3>Mixen</h3>
+        <p>A desktop agent that takes one task and splits it into steps. Each step goes to
+          Claude, Codex, Gemini or a local model, depending on which one has quota left and fits the job.
+          A separate critic step checks the result before it's marked done.</p>
+        <p class="meta">Python · CLI tools · Ollama · <span class="tag">private repo</span></p>
+      </article>
+
+      <article class="card">
+        <h3>My Uni panel</h3>
+        <p>I missed a make-up exam and a homework because I didn't see the announcements in time.
+          So I built a panel that pulls my courses, deadlines and announcements from the university's
+          learning system every night and shows them on one page.</p>
+        <p class="meta">Cloudflare Pages · D1 (SQLite) · Python · <span class="tag">private repo</span></p>
+      </article>
+
+      <article class="card">
+        <h3>Trading bot</h3>
+        <p>An automated bot for US stocks, running on a paper account (fake money) through the Alpaca API.
+          The main thing it taught me: report the results honestly, including when a change makes them worse.</p>
+        <p class="meta">Python · Alpaca API · pytest · <span class="tag">private repo</span></p>
+      </article>
+
+      <article class="card">
+        <h3>DIY Stream Deck</h3>
+        <p>A 7-inch touch screen macro pad for my Mac: app shortcuts, Spotify controls, an animated GIF.
+          Firmware, a web control panel and a 3D-printable case are done. The board hasn't arrived yet,
+          so it's only tested in software so far.</p>
+        <p class="meta">ESP32-S3 · LVGL · Python · STL <span class="tag">in progress</span></p>
+      </article>
+
+      <article class="card">
+        <h3>Video rough-cut tool</h3>
+        <p>Transcribes a video with Whisper, suggests which parts to cut, and only cuts after I approve the list.</p>
+        <p class="meta">Python · Whisper · FFmpeg</p>
+      </article>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="chips">
+        <li>Python</li>
+        <li>HTML / CSS / JavaScript</li>
+        <li>Git &amp; GitHub</li>
+        <li>Cloudflare Pages</li>
+        <li>AI coding tools</li>
+        <li>Automation scripts</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <ul class="links">
+        <li><a href="https://github.com/Biontra">GitHub · Biontra</a></li>
+        <li><a href="mailto:kaan102006@gmail.com">kaan102006@gmail.com</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>Made by Kaan, 2026.</p>
+  </footer>
+</body>
+</html>
