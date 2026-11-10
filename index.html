@@ -76,7 +76,7 @@
         <span class="rn">About</span><span class="rc">how I work</span></a>
       <a class="room r-projects" href="#projects">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><circle cx="12" cy="12" r="2.5"/></svg>
-        <span class="rn">Projects</span><span class="rc">5 inventions</span></a>
+        <span class="rn">Projects</span><span class="rc">7 inventions</span></a>
       <a class="room r-skills" href="#skills">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.5 5.5a4 4 0 00-5 5L4 16l4 4 5.5-5.5a4 4 0 005-5l-3 3-2.5-2.5z"/></svg>
         <span class="rn">Skills</span><span class="rc">6 tools</span></a>
@@ -251,6 +251,60 @@
           </dl>
           <ul class="tags" aria-label="Technologies">
             <li>Python</li><li>Whisper</li><li>FFmpeg</li>
+          </ul>
+        </article>
+
+        <article class="card" data-short="Exam Plan" data-x="45" data-y="45">
+          <div class="card-top">
+            <svg class="icon" viewBox="0 0 64 64" role="img" aria-label="Icon: hourglass next to a checklist" focusable="false">
+              <g class="draw">
+                <path pathLength="1" d="M10 8h20M10 56h20M13 8c0 14 14 16 14 24S13 42 13 56M27 8c0 14-14 16-14 24s14 10 14 24" />
+                <rect pathLength="1" x="36" y="12" width="22" height="40" rx="3" />
+                <path pathLength="1" d="M41 22h12M41 32h12M41 42h12" />
+              </g>
+              <rect class="fill" x="17" y="46" width="6" height="6" />
+            </svg>
+            <div class="ids">
+              <span class="serial">LAB-06</span>
+              <span class="status st-run">Live</span>
+            </div>
+          </div>
+          <h3>Exam Plan</h3>
+          <p>A web app for exam weeks: you enter your exams and how many hours you can study per day, and it gives you a day-by-day plan up to your last exam.</p>
+          <dl class="facts">
+            <div><dt>Problem</dt><dd>With several midterms in one week I didn't know which course to study on which day.</dd></div>
+            <div><dt>How it works</dt><dd>Hours go to closer and harder exams first, the day before each exam is a review day, and it warns you when there isn't enough time. The plan can be downloaded as a calendar file. Data stays in your browser.</dd></div>
+            <div><dt>Status</dt><dd>Live. <a href="https://exam.kaanyunusemre.com">Open the app</a> · <a href="https://github.com/Biontra/exam-plan">Source code</a></dd></div>
+          </dl>
+          <ul class="tags" aria-label="Technologies">
+            <li>JavaScript</li><li>HTML / CSS</li><li>node:test</li><li>Cloudflare</li>
+          </ul>
+        </article>
+
+        <article class="card" data-short="Kilit" data-x="86" data-y="76">
+          <div class="card-top">
+            <svg class="icon" viewBox="0 0 64 64" role="img" aria-label="Icon: padlock over a keyboard" focusable="false">
+              <g class="draw">
+                <rect pathLength="1" x="18" y="24" width="28" height="22" rx="3" />
+                <path pathLength="1" d="M24 24v-7a8 8 0 0 1 16 0v7" />
+                <rect pathLength="1" x="6" y="50" width="52" height="8" rx="2" />
+              </g>
+              <rect class="fill" x="30" y="32" width="4" height="7" />
+            </svg>
+            <div class="ids">
+              <span class="serial">LAB-07</span>
+              <span class="status st-proto">Prototype</span>
+            </div>
+          </div>
+          <h3>Kilit</h3>
+          <p>A macOS app that locks the physical keyboard, mouse and trackpad while software, like an AI agent, keeps working. It unlocks with Touch ID.</p>
+          <dl class="facts">
+            <div><dt>Problem</dt><dd>I wanted an AI agent to keep using my Mac while nobody else could touch it.</dd></div>
+            <div><dt>How it works</dt><dd>Every input event carries the ID of the process that sent it: 0 for real hardware, a process ID for software. Kilit drops the hardware events and lets the rest through. A second mode keeps the Mac inside one app until a PIN is entered.</dd></div>
+            <div><dt>Status</dt><dd>Prototype. <a href="https://github.com/Biontra/kilit">Source code</a></dd></div>
+          </dl>
+          <ul class="tags" aria-label="Technologies">
+            <li>Swift</li><li>SwiftUI</li><li>CGEvent tap</li>
           </ul>
         </article>
       </div>
