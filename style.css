@@ -449,6 +449,14 @@ html { scroll-padding-top: 96px; }
   .links a { font-size: 0.95rem; }
 }
 
+/* All four ways to connect are directly below the name. */
+.hero-contact { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; max-width: 600px; margin: 0 0 26px; }
+.hero-contact a { display: inline-flex; justify-content: center; align-items: center; gap: 8px; padding: 10px 12px; min-height: 48px; border: 1px solid #6887a5; border-radius: 5px; background: #111e30; color: #f5f8ff; font-size: 1rem; font-weight: 600; text-decoration: none; }
+.hero-contact .hero-email { background: var(--cyan); border-color: var(--cyan); color: #04101a; }
+.hero-contact a:hover { border-color: var(--cyan); box-shadow: 0 0 18px #3de8ff30; }
+.contact-symbol { font-weight: 800; }
+@media (max-width: 700px) { .hero-contact { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 24px; } }
+
 /* Honour the OS "reduce motion" setting; otherwise animations stay on. */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
