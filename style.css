@@ -578,23 +578,15 @@ html { scroll-padding-top: 96px; }
 .hud.scan-in > * { animation-name: panel-enter; animation-duration: .35s; animation-timing-function: ease-out; }
 @keyframes panel-enter { from { opacity: .35; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
 
-/* Compact personal signature, with a circuit mark drawn for this workshop. */
-.wordmark { display: inline-flex; align-items: center; gap: 11px; min-height: 44px; }
-.brand-mark { width: 36px; height: 36px; flex: none; overflow: visible; }
-.brand-hex { fill: #122235; stroke: var(--cyan); stroke-width: 1.4; }
-.brand-circuit { fill: none; stroke: #f1f7ff; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
-.brand-mark circle { fill: var(--amber); }
-.brand-type { display: flex; flex-direction: column; gap: 3px; }
-.brand-name { color: #f1f7ff; font: 700 1.1rem/1 var(--sans); letter-spacing: .16em; }
-.brand-caption { color: var(--muted); font: 400 .68rem/1.2 var(--sans); letter-spacing: .03em; }
-.wordmark:hover .brand-hex { fill: #1b3449; }
+/* Profile image anchors a compact header; contact labels stay on one line. */
+.wordmark { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; }
+.profile-avatar { display: block; width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 1px solid #627b98; background: #152338; transition: border-color .2s, transform .2s; }
+.wordmark:hover .profile-avatar { border-color: var(--cyan); transform: translateY(-1px); }
 .hero-contact a, .quick-contact a { white-space: nowrap; }
 @media (max-width: 700px) {
   .sitebar-inner { grid-template-columns: auto 1fr auto; gap: 10px; min-height: 64px; padding-top: 8px; padding-bottom: 8px; }
-  .wordmark { grid-row: 1; grid-column: 1; gap: 8px; }
-  .brand-mark { width: 30px; height: 30px; }
-  .brand-name { font-size: .95rem; letter-spacing: .12em; }
-  .brand-caption { display: none; }
+  .wordmark { grid-row: 1; grid-column: 1; }
+  .profile-avatar { width: 38px; height: 38px; }
   .quick-contact { grid-row: 1; grid-column: 2; justify-content: end; }
   .quick-contact .email-link { width: 40px; height: 40px; padding: 8px; }
   .quick-contact .email-link > span { display: none; }

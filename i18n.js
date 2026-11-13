@@ -1,4 +1,6 @@
 window.PortfolioTranslations = {
+  "Back to top": "Başa dön",
+  "Biontra GitHub profile photo": "Biontra GitHub profil fotoğrafı",
   "Personal lab": "Kişisel atölye",
   "KYEA · Personal lab": "KYEA · Kişisel atölye",
   "All input passes through.": "Tüm girdiler iletilir.",
