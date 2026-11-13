@@ -76,7 +76,7 @@
 
   var lab = document.createElement('div'); lab.className = 'lab';
   var hint = document.createElement('p'); hint.className = 'lab-hint';
-  hint.textContent = 'Lab map: select a station to open its data';
+  hint.textContent = 'Choose a project to explore';
   var map = document.createElement('div'); map.className = 'map';
   map.setAttribute('role', 'tablist'); map.setAttribute('aria-label', 'Projects');
   var hud = document.createElement('div'); hud.className = 'hud';

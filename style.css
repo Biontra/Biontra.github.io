@@ -5,7 +5,7 @@
   --line: #4a6494;
   --grid: rgba(61, 232, 255, 0.07);
   --text: #e8eef9;
-  --muted: #a9b8d3;
+  --muted: #c1cddd;
   --cyan: #3de8ff;
   --amber: #ffb340;
   --green: #5df5a6;
@@ -26,7 +26,7 @@ body {
     linear-gradient(90deg, var(--grid) 1px, transparent 1px);
   background-size: 40px 40px;
   color: var(--text);
-  font: 400 17px/1.65 var(--sans);
+  font: 400 18px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   overflow-x: hidden;
 }
 
@@ -382,6 +382,71 @@ footer p { margin: 0; border-top: 1px solid var(--line); padding-top: 20px; }
   section { padding-top: 36px; }
   .station { min-height: 92px; }
   .hud { padding: 18px 16px; }
+}
+
+
+/* Reading surfaces and contact links available throughout the visit. */
+html { scroll-padding-top: 96px; }
+.skip { z-index: 50; }
+.sitebar { position: sticky; top: 0; z-index: 20; background: #0c1424; border-bottom: 1px solid #34465e; }
+.sitebar-inner { min-height: 68px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.wordmark { color: #f5f8ff; font: 700 1.05rem var(--sans); text-decoration: none; }
+.wordmark-detail { color: var(--muted); font-weight: 400; font-size: 0.85rem; }
+.quick-contact { display: flex; align-items: center; gap: 8px; }
+.quick-contact a { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 6px 14px; border: 1px solid #4d647d; border-radius: 5px; text-decoration: none; font-size: 0.9rem; font-weight: 600; color: #f5f8ff; }
+.quick-contact .email-link { background: var(--cyan); color: #04101a; border-color: var(--cyan); }
+.quick-contact a:hover { border-color: var(--cyan); box-shadow: 0 0 14px #3de8ff26; }
+.hero-inner { padding-top: 56px; padding-bottom: 52px; }
+.hero-meta { font-size: 1rem; line-height: 1.6; }
+.hero .lead { font-size: 1.3rem; line-height: 1.6; max-width: 44ch; }
+.section-intro { max-width: 62ch; color: var(--muted); margin: -8px 0 28px; }
+.lab { grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.2fr); gap: 24px; }
+.map { background-color: #0b1320; }
+.station { width: 104px; }
+.station .nm { font-size: 1rem; }
+.station .sn { font-size: 0.75rem; }
+.hud { padding: 28px; background: #111e30; border-color: #627b98; box-shadow: 0 6px 30px #0003; }
+.hud h3 { font-size: 1.65rem; }
+.hud::before { content: "PROJECT OVERVIEW"; color: var(--muted); font-size: 0.75rem; }
+.hud > p { font-size: 1.1rem; line-height: 1.75; }
+.hud .card-top { align-items: center; }
+.project-facts { margin-bottom: 22px; }
+.fact { margin-bottom: 20px; }
+.fact h4 { margin: 0 0 5px; color: #f5f8ff; font: 700 1rem/1.5 var(--sans); }
+.fact p { margin: 0; }
+.technical-details { border-top: 1px solid #4d647d; border-bottom: 1px solid #4d647d; }
+.technical-details summary { min-height: 48px; padding: 12px 0; color: var(--cyan); font-size: 1rem; font-weight: 600; cursor: pointer; }
+.technical-details > div { padding: 0 0 18px; }
+.project-preview figcaption { font-size: 0.8rem; }
+.project-button { font-family: var(--sans); font-size: 1rem; }
+.project-contact { margin-top: 32px; padding: 24px 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; background: #111e30; border: 1px solid #627b98; border-left: 3px solid var(--cyan); }
+.project-contact p { margin: 0; }
+.project-contact .contact-kicker { color: #f5f8ff; font-weight: 700; }
+.project-contact > div > p:last-child { color: var(--muted); }
+.project-contact .project-button { flex: none; }
+.panel { background: #111e30; max-width: 70ch; padding: 24px 28px; }
+.links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; max-width: 900px; }
+.links li { min-width: 0; }
+.links a { display: flex; width: 100%; padding: 14px 18px; min-height: 60px; font-size: 1rem; background: #111e30; }
+.social-mark { display: inline-flex; justify-content: center; align-items: center; width: 22px; flex: none; color: var(--cyan); font: 700 1.15rem var(--sans); }
+@media (min-width: 901px) { .map { top: 96px; } }
+@media (max-width: 900px) { .lab { grid-template-columns: minmax(0, 1fr); } .station { width: 112px; } }
+@media (max-width: 700px) {
+  .sitebar-inner { min-height: 62px; gap: 8px; }
+  .wordmark-detail, .quick-github { display: none !important; }
+  .quick-contact { gap: 6px; }
+  .quick-contact a { font-size: 0.85rem; padding: 6px 10px; }
+  .hero-inner { padding-top: 32px; padding-bottom: 32px; }
+  .hero .lead { font-size: 1.15rem; line-height: 1.65; }
+  .hero-meta { font-size: 0.95rem; }
+  .hero nav a { font-size: 0.8rem; min-height: 46px; }
+  .hud { padding: 22px 18px; }
+  .hud > p { font-size: 1.05rem; }
+  .station { width: auto; }
+  .station .nm { font-size: 0.9rem; }
+  .project-contact { padding: 22px 18px; align-items: flex-start; flex-direction: column; }
+  .links { grid-template-columns: minmax(0, 1fr); }
+  .links a { font-size: 0.95rem; }
 }
 
 /* Honour the OS "reduce motion" setting; otherwise animations stay on. */

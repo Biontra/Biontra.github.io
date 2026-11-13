@@ -11,10 +11,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap">
-  <link rel="stylesheet" href="style.css?v=20261113">
-  <script src="script.js?v=20261113" defer></script>
+  <link rel="stylesheet" href="style.css?v=20261113-readability">
+  <script src="script.js?v=20261113-readability" defer></script>
 </head>
-<body>
+<body id="top">
+  <div class="sitebar">
+    <div class="wrap sitebar-inner">
+      <a class="wordmark" href="#top">Kaan<span class="wordmark-detail"> · inventor's workshop</span></a>
+      <div class="quick-contact" aria-label="Quick contact">
+        <a class="email-link" href="mailto:kaan102006@gmail.com"><span aria-hidden="true">↗</span> Email me</a>
+        <a href="https://www.linkedin.com/in/kaanyunusemre/">LinkedIn</a>
+        <a class="quick-github" href="https://github.com/Biontra">GitHub</a>
+      </div>
+    </div>
+  </div>
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="hero">
@@ -28,8 +38,8 @@
         <p class="hero-meta">First-year computer science student · Kadir Has University, Istanbul</p>
         <nav aria-label="Main">
           <a class="primary" href="#projects">Explore projects <span aria-hidden="true">↗</span></a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
+          <a href="mailto:kaan102006@gmail.com">Email me <span aria-hidden="true">↗</span></a>
+          <a href="#contact">All contact links</a>
         </nav>
       </div>
 
@@ -82,11 +92,12 @@
         <span class="rn">Skills</span><span class="rc">6 tools</span></a>
       <a class="room r-contact" href="#contact">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-        <span class="rn">Contact</span><span class="rc">2 ways to reach me</span></a>
+        <span class="rn">Contact</span><span class="rc">4 ways to connect</span></a>
     </nav>
 
     <section id="projects" aria-labelledby="projects-h">
       <h2 id="projects-h"><span class="idx" aria-hidden="true">01</span>Projects</h2>
+      <p class="section-intro">Tools I built for problems I ran into. Choose a project to see what it does.</p>
 
       <div class="grid">
         <article class="card" data-short="Mixen" data-x="16" data-y="26">
@@ -109,11 +120,7 @@
           <h3>Mixen</h3>
           <p>One task, several AI tools. A desktop agent routes each step to a suitable model and checks the result with a separate critic.</p>
           <figure class="project-preview flow-preview"><img src="assets/mixen-flow.svg" width="720" height="340" alt="Task → Model routing → Critic review" loading="lazy"><figcaption>Workflow diagram</figcaption></figure>
-          <dl class="facts">
-            <div><dt>Problem</dt><dd>Too many AI apps, each with its own quota.</dd></div>
-            <div><dt>How it works</dt><dd>Uses official CLI tools for Claude, Codex, Gemini and local models. Quotas are labelled exact, derived or unknown; unknown values stay unknown.</dd></div>
-            <div><dt>Status</dt><dd>Prototype. The repo is private.</dd></div>
-          </dl>
+          <div class="project-facts"><div class="fact"><h4>Why I built it</h4><p>Too many AI apps, each with its own quota.</p></div><div class="fact"><h4>Current status</h4><p>Prototype. The repo is private.</p></div><details class="technical-details"><summary>How it works</summary><div>Uses official CLI tools for Claude, Codex, Gemini and local models. Quotas are labelled exact, derived or unknown; unknown values stay unknown.</div></details></div>
           <ul class="tags" aria-label="Technologies">
             <li>Python</li><li>CLI tools</li><li>Ollama</li><li class="priv">private repo</li>
           </ul>
@@ -139,11 +146,7 @@
           <h3>My Uni panel</h3>
           <p>Courses, deadlines and announcements in one place, synced nightly from my university’s learning system.</p>
           <figure class="project-preview flow-preview"><img src="assets/uni-flow.svg" width="720" height="340" alt="Learning system → Nightly sync → Uni panel" loading="lazy"><figcaption>Workflow diagram</figcaption></figure>
-          <dl class="facts">
-            <div><dt>Problem</dt><dd>Deadlines and announcements were spread across the learning system, and I only saw some of them too late.</dd></div>
-            <div><dt>How it works</dt><dd>Python handles the nightly data sync. Cloudflare Pages and D1 serve the panel; AI is used only in the assistant.</dd></div>
-            <div><dt>Status</dt><dd>Running. It moved from Netlify to Cloudflare Pages when the free Netlify credits ran out.</dd></div>
-          </dl>
+          <div class="project-facts"><div class="fact"><h4>Why I built it</h4><p>Deadlines and announcements were spread across the learning system, and I only saw some of them too late.</p></div><div class="fact"><h4>Current status</h4><p>Running. It moved from Netlify to Cloudflare Pages when the free Netlify credits ran out.</p></div><details class="technical-details"><summary>How it works</summary><div>Python handles the nightly data sync. Cloudflare Pages and D1 serve the panel; AI is used only in the assistant.</div></details></div>
           <ul class="tags" aria-label="Technologies">
             <li>Cloudflare Pages</li><li>D1 (SQLite)</li><li>Python</li><li class="priv">private repo</li>
           </ul>
@@ -169,11 +172,7 @@
           <h3>Trading bot</h3>
           <p>A US stock trading experiment on an Alpaca paper account. I use it to test strategies and report both improvements and regressions.</p>
           <figure class="project-preview flow-preview"><img src="assets/trading-bot-flow.svg" width="720" height="340" alt="Market data → Strategy + limits → Paper account" loading="lazy"><figcaption>Workflow diagram</figcaption></figure>
-          <dl class="facts">
-            <div><dt>Problem</dt><dd>A trading strategy is easy to make look better than it is.</dd></div>
-            <div><dt>How it works</dt><dd>It trades US stocks on a paper account through the Alpaca API. There is no crypto and no leverage: position size is limited by cash, and tests enforce both rules. AI analysis runs through the Claude and Codex command-line tools, not paid API keys.</dd></div>
-            <div><dt>Status</dt><dd>Paper account, fake money only.</dd></div>
-          </dl>
+          <div class="project-facts"><div class="fact"><h4>Why I built it</h4><p>A trading strategy is easy to make look better than it is.</p></div><div class="fact"><h4>Current status</h4><p>Paper account, fake money only.</p></div><details class="technical-details"><summary>How it works</summary><div>It trades US stocks on a paper account through the Alpaca API. There is no crypto and no leverage: position size is limited by cash, and tests enforce both rules. AI analysis runs through the Claude and Codex command-line tools, not paid API keys.</div></details></div>
           <ul class="tags" aria-label="Technologies">
             <li>Python</li><li>Alpaca API</li><li>pytest</li><li class="priv">private repo</li>
           </ul>
@@ -200,10 +199,7 @@
           <h3>DIY Stream Deck</h3>
           <p>A 7-inch touch screen macro pad for my Mac, with app shortcuts, Spotify controls and an animated GIF.</p>
           <figure class="project-preview flow-preview"><img src="assets/stream-deck-flow.svg" width="720" height="340" alt="Touch screen → ESP32-S3 → Mac actions" loading="lazy"><figcaption>Workflow diagram</figcaption></figure>
-          <dl class="facts">
-            <div><dt>How it works</dt><dd>Firmware, a web control panel and a 3D-printable case are done.</dd></div>
-            <div><dt>Status</dt><dd>The board hasn't arrived yet, so it's only tested in software so far.</dd></div>
-          </dl>
+          <div class="project-facts"><div class="fact"><h4>Current status</h4><p>The board hasn't arrived yet, so it's only tested in software so far.</p></div><details class="technical-details"><summary>How it works</summary><div>Firmware, a web control panel and a 3D-printable case are done.</div></details></div>
           <ul class="tags" aria-label="Technologies">
             <li>ESP32-S3</li><li>LVGL</li><li>Python</li><li>STL</li><li class="wip">in progress</li>
           </ul>
@@ -232,11 +228,7 @@
           <h3>Video rough-cut tool</h3>
           <p>A video tool that transcribes with Whisper, suggests cuts and waits for my approval before exporting.</p>
           <figure class="project-preview flow-preview"><img src="assets/rough-cut-flow.svg" width="720" height="340" alt="Whisper → Approve cut list → FFmpeg export" loading="lazy"><figcaption>Workflow diagram</figcaption></figure>
-          <dl class="facts">
-            <div><dt>Problem</dt><dd>I wanted to learn how rough cutting can be automated, starting with a small version I can measure.</dd></div>
-            <div><dt>How it works</dt><dd>The suggested cuts are written to a list that I read first. The original video is never changed.</dd></div>
-            <div><dt>Status</dt><dd>Version 1, running. Tested on a test video so far.</dd></div>
-          </dl>
+          <div class="project-facts"><div class="fact"><h4>Why I built it</h4><p>I wanted to learn how rough cutting can be automated, starting with a small version I can measure.</p></div><div class="fact"><h4>Current status</h4><p>Version 1, running. Tested on a test video so far.</p></div><details class="technical-details"><summary>How it works</summary><div>The suggested cuts are written to a list that I read first. The original video is never changed.</div></details></div>
           <ul class="tags" aria-label="Technologies">
             <li>Python</li><li>Whisper</li><li>FFmpeg</li>
           </ul>
@@ -261,11 +253,7 @@
           <p>Turn exam dates and daily study hours into a practical day-by-day plan.</p>
           <div class="project-actions"><a class="project-button primary" href="https://exam.kaanyunusemre.com">Try the app <span aria-hidden="true">↗</span></a><a class="project-button" href="https://github.com/Biontra/exam-plan">Source code</a></div>
           <figure class="project-preview"><a href="https://exam.kaanyunusemre.com"><img src="assets/exam-plan-demo.jpg" width="1280" height="800" alt="Exam Plan with sample exams: countdown, readiness ring, study timeline and daily blocks" loading="lazy"></a><figcaption>In the app · sample exams</figcaption></figure>
-          <dl class="facts">
-            <div><dt>Problem</dt><dd>With several midterms in one week I didn't know which course to study on which day.</dd></div>
-            <div><dt>How it works</dt><dd>Prioritises closer and harder exams, reserves review days and redistributes missed study time. Includes a focus timer, readiness rings and topic checklists.</dd></div>
-            <div><dt>Status</dt><dd>Live. No account needed; your plan stays in your browser.</dd></div>
-          </dl>
+          <div class="project-facts"><div class="fact"><h4>Why I built it</h4><p>With several midterms in one week I didn't know which course to study on which day.</p></div><div class="fact"><h4>Current status</h4><p>Live. No account needed; your plan stays in your browser.</p></div><details class="technical-details"><summary>How it works</summary><div>Prioritises closer and harder exams, reserves review days and redistributes missed study time. Includes a focus timer, readiness rings and topic checklists.</div></details></div>
           <ul class="tags" aria-label="Technologies">
             <li>JavaScript (ES modules)</li><li>HTML / CSS</li><li>node:test · 45 tests</li><li>Cloudflare</li>
           </ul>
@@ -289,11 +277,7 @@
           <h3>Kilit</h3>
           <p>A macOS prototype that blocks physical keyboard, mouse and trackpad input while an AI agent keeps working. Unlock with Touch ID.</p>
           <div class="project-actions"><a class="project-button" href="https://github.com/Biontra/kilit">Source code <span aria-hidden="true">↗</span></a></div><figure class="project-preview flow-preview"><img src="assets/kilit-flow.svg" width="720" height="340" alt="Input events pass through a hardware filter so software input can continue" loading="lazy"><figcaption>Workflow diagram · prototype</figcaption></figure>
-          <dl class="facts">
-            <div><dt>Problem</dt><dd>I wanted an AI agent to keep using my Mac while nobody else could touch it.</dd></div>
-            <div><dt>How it works</dt><dd>Every input event carries the ID of the process that sent it: 0 for real hardware, a process ID for software. Kilit drops the hardware events and lets the rest through. A second mode keeps the Mac inside one app until a PIN is entered.</dd></div>
-            <div><dt>Status</dt><dd>Prototype.</dd></div>
-          </dl>
+          <div class="project-facts"><div class="fact"><h4>Why I built it</h4><p>I wanted an AI agent to keep using my Mac while nobody else could touch it.</p></div><div class="fact"><h4>Current status</h4><p>Prototype.</p></div><details class="technical-details"><summary>How it works</summary><div>Every input event carries the ID of the process that sent it: 0 for real hardware, a process ID for software. Kilit drops the hardware events and lets the rest through. A second mode keeps the Mac inside one app until a PIN is entered.</div></details></div>
           <ul class="tags" aria-label="Technologies">
             <li>Swift</li><li>SwiftUI</li><li>CGEvent tap</li>
           </ul>
@@ -303,7 +287,12 @@
 
 
 
-        <section id="about" aria-labelledby="about-h">
+    <aside class="project-contact">
+        <div><p class="contact-kicker">Have a question about a project?</p><p>I'd love to hear what you're building.</p></div>
+        <a class="project-button primary" href="mailto:kaan102006@gmail.com">Let's talk <span aria-hidden="true">↗</span></a>
+      </aside>
+
+    <section id="about" aria-labelledby="about-h">
       <h2 id="about-h"><span class="idx" aria-hidden="true">02</span>About</h2>
       <div class="panel">
         <p>I write most of my code together with AI coding tools (Claude Code, Codex).
@@ -344,14 +333,17 @@
     </section>
 
     <section id="contact" aria-labelledby="contact-h">
-      <h2 id="contact-h"><span class="idx" aria-hidden="true">04</span>Contact</h2>
+      <h2 id="contact-h"><span class="idx" aria-hidden="true">04</span>Let’s talk</h2>
+      <p class="section-intro">Have a project idea, a question or feedback? Send me an email or find me here.</p>
       <ul class="links">
         <li><a href="https://github.com/Biontra">
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 00-1.3-3.2 4.2 4.2 0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 00-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 00-.1 3.2A4.6 4.6 0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
           GitHub · Biontra</a></li>
         <li><a href="mailto:kaan102006@gmail.com">
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-          kaan102006@gmail.com</a></li>
+          Email · kaan102006@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/kaanyunusemre/"><span class="social-mark" aria-hidden="true">in</span>LinkedIn · Kaan Yunus Emre</a></li>
+        <li><a href="https://www.instagram.com/k_y_e_a/"><span class="social-mark" aria-hidden="true">◎</span>Instagram · @k_y_e_a</a></li>
       </ul>
     </section>
   </main>
