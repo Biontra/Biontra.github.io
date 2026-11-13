@@ -457,6 +457,9 @@ html { scroll-padding-top: 96px; }
 .contact-symbol { font-weight: 800; }
 @media (max-width: 700px) { .hero-contact { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 24px; } }
 
+.instagram-icon { display: block; width: 22px; height: 22px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; }
+.instagram-icon .instagram-dot { fill: currentColor; stroke: none; }
+
 /* Honour the OS "reduce motion" setting; otherwise animations stay on. */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
