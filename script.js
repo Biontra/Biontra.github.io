@@ -151,5 +151,6 @@
   lab.appendChild(hint); lab.appendChild(map); lab.appendChild(hud);
   list.hidden = true;
   list.parentNode.insertBefore(lab, list);
-  select(0, false);
+  var featured = cards.findIndex(function (card) { return card.dataset.featured === "true"; });
+  select(featured < 0 ? 0 : featured, false);
 })();
