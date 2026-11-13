@@ -1,9 +1,11 @@
 window.PortfolioTranslations = {
+  "Personal lab": "Kişisel atölye",
+  "KYEA · Personal lab": "KYEA · Kişisel atölye",
   "All input passes through.": "Tüm girdiler iletilir.",
   "Uni": "Uni",
   "Rough-cut": "Kaba kurgu",
   "· inventor's workshop": "· mucidin atölyesi",
-  "Email me": "E-posta gönder",
+  "Email": "E-posta",
   "Skip to content": "İçeriğe geç",
   "Inventor's workshop · Istanbul": "Mucidin atölyesi · İstanbul",
   "I build AI agents and automation tools that solve problems in my everyday life.": "Günlük hayatımdaki sorunları çözen yapay zekâ ajanları ve otomasyon araçları geliştiriyorum.",
