@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Week 3 · Kaan Yunus Emre Akgöz</title>
+  <meta name="description" content="NEXA Fellowship Week 3: a repo review of banana-studio, a prompt benchmark across 10 models, and a benchmark review of SWE-bench Verified.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#070b14">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23070b14'/%3E%3Cpath d='M16 5l9 5v12l-9 5-9-5V10z' fill='none' stroke='%233de8ff' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23ffb340'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="style.css?v=week3-v1">
+  <script src="i18n.js?v=week3-v1" defer></script>
+</head>
+<body id="top">
+  <div class="sitebar">
+    <div class="wrap sitebar-inner">
+      <a class="wordmark" href="index.html" aria-label="Back to portfolio" data-i18n-aria-label="Back to portfolio"><img class="profile-avatar" src="assets/github-avatar.png" width="44" height="44" alt="Biontra GitHub profile photo" data-i18n-alt="Biontra GitHub profile photo"></a>
+      <div class="quick-contact"><a href="index.html"><span data-i18n="Back to portfolio">Back to portfolio</span></a></div>
+      <div class="language-switch" role="group" aria-label="Language" data-i18n-aria-label="Language"><button type="button" data-lang="tr" aria-pressed="false">TR</button><button type="button" data-lang="en" aria-pressed="true">EN</button></div>
+    </div>
+  </div>
+  <main id="main" class="wrap week3">
+    <header class="week3-head">
+      <p class="label"><span data-i18n="NEXA Fellowship · Week 3">NEXA Fellowship · Week 3</span></p>
+      <h1><span data-i18n="Week 3 work">Week 3 work</span></h1>
+      <p class="section-intro"><span data-i18n="A repo review, a prompt benchmark on 10 models and a benchmark review. Numbers come from my own result files; what I did not measure is marked as such.">A repo review, a prompt benchmark on 10 models and a benchmark review. Numbers come from my own result files; what I did not measure is marked as such.</span></p>
+    </header>
+
+    <section class="w3-block" aria-labelledby="w3-repo">
+      <h2 id="w3-repo"><span data-i18n="Repo review: banana-studio">Repo review: banana-studio</span></h2>
+      <p><span data-i18n="Banana Studio is an open-source studio for generating images and video with your own API key. I ran its test suite (725 tests, 723 passed, 2 skipped) and used the interface without a paid key.">Banana Studio is an open-source studio for generating images and video with your own API key. I ran its test suite (725 tests, 723 passed, 2 skipped) and used the interface without a paid key.</span></p>
+      <p><span data-i18n="I found that the README download links pointed to v0.1.2 while the latest release was v0.1.10, and that on an empty gallery the Create Folder button sits behind the generation bar at 1440x900.">I found that the README download links pointed to v0.1.2 while the latest release was v0.1.10, and that on an empty gallery the Create Folder button sits behind the generation bar at 1440x900.</span></p>
+      <p><a class="project-button" href="https://github.com/Biontra/banana-studio" rel="noopener"><span data-i18n="My fork on GitHub">My fork on GitHub</span> <span aria-hidden="true">↗</span></a></p>
+      <div class="w3-shots">
+        <figure><img src="assets/week3/banana-studio-no-key.png" width="1000" height="625" loading="lazy" alt="Banana Studio with a folder and a prompt; the Generate button is disabled and a message asks for an OpenAI key" data-i18n-alt="Banana Studio with a folder and a prompt; the Generate button is disabled and a message asks for an OpenAI key"><figcaption><span data-i18n="Without a key, Generate stays disabled and the app says which key is missing.">Without a key, Generate stays disabled and the app says which key is missing.</span></figcaption></figure>
+        <figure><img src="assets/week3/banana-studio-template.png" width="1000" height="625" loading="lazy" alt="Banana Studio after saving a generation template" data-i18n-alt="Banana Studio after saving a generation template"><figcaption><span data-i18n="A saved template: 16:9, 3 images per run.">A saved template: 16:9, 3 images per run.</span></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="w3-block" aria-labelledby="w3-bench">
+      <h2 id="w3-bench"><span data-i18n="Prompt benchmark: 10 questions, 10 models">Prompt benchmark: 10 questions, 10 models</span></h2>
+      <p><span data-i18n="I took 10 questions from the MIHENK open set and asked each model three times; the Claude models ran once each. Accuracy is the median over runs.">I took 10 questions from the MIHENK open set and asked each model three times; the Claude models ran once each. Accuracy is the median over runs.</span></p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Benchmark results table" data-i18n-aria-label="Benchmark results table">
+        <table class="w3-table">
+          <caption class="sr-only"><span data-i18n="Accuracy, format, time and cost per model">Accuracy, format, time and cost per model</span></caption>
+          <thead><tr><th scope="col"><span data-i18n="Model">Model</span></th><th scope="col"><span data-i18n="Accuracy per run">Accuracy per run</span></th><th scope="col"><span data-i18n="Median accuracy">Median accuracy</span></th><th scope="col"><span data-i18n="Format (raw, strict)">Format (raw, strict)</span></th><th scope="col"><span data-i18n="Median time (s)">Median time (s)</span></th><th scope="col"><span data-i18n="Cost">Cost</span></th></tr></thead>
+          <tbody>
+<tr><th scope="row">qwen3-8b</th><td>8/10, 7/10, 7/10</td><td>7/10</td><td>3/3</td><td>20.6</td><td><span data-i18n="no extra cost (local)">no extra cost (local)</span></td></tr>
+<tr><th scope="row">dolphin3-8b</th><td>5/10, 4/10, 5/10</td><td>5/10</td><td>3/3</td><td>8.5</td><td><span data-i18n="no extra cost (local)">no extra cost (local)</span></td></tr>
+<tr><th scope="row">qwen3.5-abliterated-9b</th><td>4/10, 4/10, 7/10</td><td>4/10</td><td>3/3</td><td>23.9</td><td><span data-i18n="no extra cost (local)">no extra cost (local)</span></td></tr>
+<tr><th scope="row">gemini-4-argon-medium</th><td>10/10, 10/10, 10/10</td><td>10/10</td><td>3/3</td><td>11.7</td><td><span data-i18n="no extra cost (subscription)">no extra cost (subscription)</span></td></tr>
+<tr><th scope="row">gemini-3.8-flash-low</th><td>10/10, 10/10, 10/10</td><td>10/10</td><td>3/3</td><td>6.0</td><td><span data-i18n="no extra cost (subscription)">no extra cost (subscription)</span></td></tr>
+<tr><th scope="row">gemini-4-neon-medium</th><td>10/10, 10/10, 10/10</td><td>10/10</td><td>3/3</td><td>12.5</td><td><span data-i18n="no extra cost (subscription)">no extra cost (subscription)</span></td></tr>
+<tr><th scope="row">gpt-oss-120b-medium</th><td>10/10, 9/10, 9/10</td><td>9/10</td><td>3/3</td><td>8.7</td><td><span data-i18n="no extra cost (subscription)">no extra cost (subscription)</span></td></tr>
+<tr><th scope="row">codex</th><td colspan="5"><span data-i18n="Not run: usage limit was full">Not run: usage limit was full</span></td></tr>
+<tr><th scope="row">claude-haiku</th><td><span data-i18n="9/10 (1 run)">9/10 (1 run)</span></td><td>9/10</td><td>1/1</td><td><span data-i18n="not measured">not measured</span></td><td><span data-i18n="not stated">not stated</span></td></tr>
+<tr><th scope="row">claude-sonnet</th><td><span data-i18n="8/10 (1 run)">8/10 (1 run)</span></td><td>8/10</td><td>1/1</td><td><span data-i18n="not measured">not measured</span></td><td><span data-i18n="not stated">not stated</span></td></tr>
+<tr><th scope="row">claude-opus</th><td><span data-i18n="10/10 (1 run)">10/10 (1 run)</span></td><td>10/10</td><td>1/1</td><td><span data-i18n="not measured">not measured</span></td><td><span data-i18n="not stated">not stated</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="w3-note"><span data-i18n="Time is wall-clock time of the whole call; local runs include loading the model each time. Claude models ran as Claude Code subagents with their own system prompt.">Time is wall-clock time of the whole call; local runs include loading the model each time. Claude models ran as Claude Code subagents with their own system prompt.</span></p>
+      <p><span data-i18n="The three Gemini models scored 10/10 in all three runs and gpt-oss-120b-medium had a median of 9/10; among local models qwen3-8b reached 7/10, and qwen3.5-abliterated-9b moved between 4 and 7 across runs. Only 10 questions and one prompt were used, and the hardest level in the MIHENK open set is L2, so the top models hit the ceiling and could not be told apart.">The three Gemini models scored 10/10 in all three runs and gpt-oss-120b-medium had a median of 9/10; among local models qwen3-8b reached 7/10, and qwen3.5-abliterated-9b moved between 4 and 7 across runs. Only 10 questions and one prompt were used, and the hardest level in the MIHENK open set is L2, so the top models hit the ceiling and could not be told apart.</span></p>
+      <ul class="w3-links">
+        <li><a href="https://github.com/gorkemergune/mihenk-benchmark" rel="noopener">MIHENK</a> <span data-i18n="Turkish and English, 800 questions, 20 disciplines">Turkish and English, 800 questions, 20 disciplines</span></li>
+        <li><a href="https://github.com/ArdaYueksel/TurkishMMLU" rel="noopener">TurkishMMLU</a> <span data-i18n="Turkish multiple-choice exam benchmark">Turkish multiple-choice exam benchmark</span></li>
+      </ul>
+    </section>
+
+    <section class="w3-block" aria-labelledby="w3-swe">
+      <h2 id="w3-swe"><span data-i18n="Benchmark review: SWE-bench Verified">Benchmark review: SWE-bench Verified</span></h2>
+      <p><span data-i18n="SWE-bench Verified asks a model to fix a real GitHub issue by writing a patch; it has 500 tasks, all from Python projects. A task counts as solved only if the tests that were failing now pass and the tests that were passing still pass.">SWE-bench Verified asks a model to fix a real GitHub issue by writing a patch; it has 500 tasks, all from Python projects. A task counts as solved only if the tests that were failing now pass and the tests that were passing still pass.</span></p>
+      <p><span data-i18n="Its reliability is debated: news reports say OpenAI stopped reporting it in February 2026 because of faulty tests and data leakage. I read this only in secondary sources and did not verify it.">Its reliability is debated: news reports say OpenAI stopped reporting it in February 2026 because of faulty tests and data leakage. I read this only in secondary sources and did not verify it.</span></p>
+      <p><a class="project-button" href="https://www.swebench.com/" rel="noopener">swebench.com <span aria-hidden="true">↗</span></a></p>
+    </section>
+
+    <section class="w3-block" aria-labelledby="w3-1in8b">
+      <h2 id="w3-1in8b"><span data-i18n="Note: 1in8b.life">Note: 1in8b.life</span></h2>
+      <p><span data-i18n="In 1in8b.life you cannot choose where you are born, and each life follows real country statistics. I played four lives; two ended at age 2 and age 0, and every event shows a sourced data line, which I want to reuse in Exam Plan and in benchmark tables.">In 1in8b.life you cannot choose where you are born, and each life follows real country statistics. I played four lives; two ended at age 2 and age 0, and every event shows a sourced data line, which I want to reuse in Exam Plan and in benchmark tables.</span></p>
+    </section>
+  </main>
+  <footer class="wrap week3-foot"><a href="index.html"><span data-i18n="Back to portfolio">Back to portfolio</span></a> · <a href="#top"><span data-i18n="Back to top">Back to top</span></a></footer>
+</body>
+</html>

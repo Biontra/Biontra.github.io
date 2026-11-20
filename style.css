@@ -598,3 +598,30 @@ html { scroll-padding-top: 96px; }
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .card:hover { transform: none; }
 }
+
+/* Week 3 page and home teaser */
+.w3-teaser { padding-top: 24px; }
+.w3-teaser-body { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 24px; border: 1px solid var(--line); background: var(--card); }
+.w3-teaser h2 { font-size: 1.35rem; margin: 0 0 6px; }
+.w3-teaser p { margin: 0; color: var(--muted); }
+.week3 { padding-bottom: 32px; }
+.week3-head { padding-top: 40px; }
+.week3-head h1 { margin: 6px 0 12px; }
+.w3-block { margin-top: 40px; padding: 24px 16px; border: 1px solid var(--line); background: var(--card); min-width: 0; }
+.w3-block h2 { font-size: 1.35rem; margin: 0 0 14px; }
+.w3-block p { max-width: 70ch; margin: 0 0 14px; overflow-wrap: anywhere; }
+.w3-shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 8px; }
+.w3-shots figure { margin: 0; }
+.w3-shots img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+.w3-shots figcaption { margin-top: 8px; font-size: 0.9rem; color: var(--muted); }
+.table-scroll { overflow-x: auto; max-width: 100%; border: 1px solid var(--line); margin-bottom: 12px; }
+.w3-table { border-collapse: collapse; width: 100%; min-width: 680px; font-size: 0.9rem; }
+.w3-table th, .w3-table td { padding: 8px 10px; border-bottom: 1px solid #34465e; text-align: left; vertical-align: top; }
+.w3-table thead th { color: var(--amber); font-weight: 600; white-space: nowrap; }
+.w3-table tbody th { font-family: var(--mono); font-weight: 500; white-space: nowrap; }
+.w3-note { color: var(--muted); font-size: 0.9rem; }
+.w3-links { margin: 0; padding-left: 20px; }
+.w3-links li { margin-bottom: 8px; overflow-wrap: anywhere; }
+.week3-foot { padding: 24px 16px 40px; color: var(--muted); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (min-width: 700px) { .w3-block { padding: 28px 28px; } }
