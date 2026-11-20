@@ -614,6 +614,10 @@ html { scroll-padding-top: 96px; }
 .w3-shots figure { margin: 0; }
 .w3-shots img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
 .w3-shots figcaption { margin-top: 8px; font-size: 0.9rem; color: var(--muted); }
+.w3-block h3 { font-size: 1.05rem; margin: 22px 0 10px; color: var(--amber); }
+.w3-prompt code { display: block; padding: 12px 14px; border: 1px solid var(--line); font-family: var(--mono); font-size: 0.85rem; overflow-wrap: anywhere; white-space: normal; }
+.w3-shots video { display: block; width: 100%; height: auto; background: #000; border: 1px solid var(--line); }
+.w3-shots-small { grid-template-columns: minmax(0, 200px); }
 .table-scroll { overflow-x: auto; max-width: 100%; border: 1px solid var(--line); margin-bottom: 12px; }
 .w3-table { border-collapse: collapse; width: 100%; min-width: 680px; font-size: 0.9rem; }
 .w3-table th, .w3-table td { padding: 8px 10px; border-bottom: 1px solid #34465e; text-align: left; vertical-align: top; }
