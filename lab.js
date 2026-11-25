@@ -11,12 +11,10 @@
   var cleanup = function () {};
   var copyTimer;
   var lab = document.createElement('div'); lab.className = 'lab';
-  var hint = document.createElement('p'); hint.className = 'lab-hint';
   var mapShell = document.createElement('div'); mapShell.className = 'map-shell';
   var mapHeading = document.createElement('div'); mapHeading.className = 'map-heading';
-  var mapTitle = document.createElement('span');
   var resetView = document.createElement('button'); resetView.type = 'button'; resetView.className = 'map-reset';
-  mapHeading.append(mapTitle, resetView);
+  mapHeading.append(resetView);
   var map = document.createElement('div'); map.className = 'map'; map.setAttribute('role', 'tablist');
   var world = document.createElement('div'); world.className = 'map-world'; map.append(world);
   var wires = document.createElementNS(NS, 'svg');
@@ -46,10 +44,9 @@
     world.append(button);
     return button;
   });
-  var mapFooter = document.createElement('p'); mapFooter.className = 'map-footer';
-  mapShell.append(mapHeading, map, mapFooter);
+  mapShell.append(mapHeading, map);
   var hud = document.createElement('div'); hud.className = 'hud'; hud.id = 'station-panel'; hud.tabIndex = 0; hud.setAttribute('role', 'tabpanel');
-  lab.append(hint, mapShell, hud); list.before(lab); list.hidden = true;
+  lab.append(mapShell, hud); list.before(lab); list.hidden = true;
 
   function el(tag, className, key) {
     var node = document.createElement(tag);
@@ -65,9 +62,6 @@
     return url;
   }
   function updateLabels() {
-    hint.textContent = I.t('Choose a project to explore');
-    mapTitle.textContent = I.t('LAB MAP / SECTOR A');
-    mapFooter.textContent = cards.length + ' ' + I.t('STATIONS');
     resetView.textContent = I.t('Reset view');
     map.setAttribute('aria-label', I.t('Projects'));
     tabs.forEach(function (button, index) {
