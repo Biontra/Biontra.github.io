@@ -106,7 +106,6 @@ window.PortfolioTranslations = {
   "Input filter": "Girdi filtresi",
   "Hardware stops. Software continues.": "Donanım durur. Yazılım devam eder.",
   "Main": "Ana menü",
-  "Quick contact": "Hızlı iletişim",
   "Contact Kaan": "Kaan'a ulaş",
   "Technologies": "Teknolojiler",
   "Language": "Dil",

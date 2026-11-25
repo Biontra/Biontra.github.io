@@ -346,7 +346,6 @@ html { scroll-padding-top: 96px; }
 .wordmark-detail { color: var(--muted); font-weight: 400; font-size: 0.85rem; }
 .quick-contact { display: flex; align-items: center; gap: 8px; }
 .quick-contact a { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 6px 14px; border: 1px solid #4d647d; border-radius: 5px; text-decoration: none; font-size: 0.9rem; font-weight: 600; color: #f5f8ff; }
-.quick-contact .email-link { background: var(--cyan); color: #04101a; border-color: var(--cyan); }
 .quick-contact a:hover { border-color: var(--cyan); box-shadow: 0 0 14px #3de8ff26; }
 .hero-inner { padding-top: 56px; padding-bottom: 52px; }
 .hero-meta { font-size: 1rem; line-height: 1.6; }
@@ -376,7 +375,7 @@ html { scroll-padding-top: 96px; }
 @media (max-width: 900px) { .lab { grid-template-columns: minmax(0, 1fr); } .station { width: 112px; } }
 @media (max-width: 700px) {
   .sitebar-inner { min-height: 62px; gap: 8px; }
-  .wordmark-detail, .quick-github { display: none !important; }
+  .wordmark-detail { display: none !important; }
   .quick-contact { gap: 6px; }
   .quick-contact a { font-size: 0.85rem; padding: 6px 10px; }
   .hero-inner { padding-top: 32px; padding-bottom: 32px; }
@@ -403,13 +402,12 @@ html { scroll-padding-top: 96px; }
 .contact-icon { width: 22px; height: 22px; display: block; flex: none; }
 .contact-icon.github-icon { fill: currentColor; stroke: none; }
 .contact-icon.mail-icon { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.quick-contact .contact-icon { width: 18px; height: 18px; }
 
 
 /* Language controls remain separate from the contact links. */
 .sitebar-inner { display: grid; grid-template-columns: auto 1fr auto; gap: 18px; }
 .quick-contact { justify-content: end; }
-.language-switch { display: inline-flex; padding: 3px; gap: 3px; border: 1px solid #4d647d; border-radius: 6px; }
+.language-switch { grid-column: 3; justify-self: end; display: inline-flex; padding: 3px; gap: 3px; border: 1px solid #4d647d; border-radius: 6px; }
 .language-switch button { min-width: 38px; min-height: 36px; border: 0; border-radius: 3px; background: transparent; color: var(--muted); font: 700 0.85rem var(--sans); cursor: pointer; }
 .language-switch button[aria-pressed="true"] { background: #d7f6ff; color: #07101b; }
 .contact-icon.linkedin-icon { fill: currentColor; stroke: none; }
@@ -512,8 +510,6 @@ html { scroll-padding-top: 96px; }
   .wordmark { grid-row: 1; grid-column: 1; }
   .profile-avatar { width: 38px; height: 38px; }
   .quick-contact { grid-row: 1; grid-column: 2; justify-content: end; }
-  .quick-contact .email-link { width: 40px; height: 40px; padding: 8px; }
-  .quick-contact .email-link > span { display: none; }
   .language-switch { grid-row: 1; grid-column: 3; }
 }
 
