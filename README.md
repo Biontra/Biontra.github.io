@@ -21,8 +21,9 @@ Then open http://localhost:8000.
 ## Portfolio features
 
 - TR/EN switches all page copy, project details, controls and workflow diagrams. The selection is saved in the browser. `?lang=tr` or `?lang=en` explicitly selects a language.
-- Share a project with `?project=kilit&lang=tr#projects`. Slugs: `mixen`, `uni`, `trading-bot`, `stream-deck`, `rough-cut`, `exam-plan`, `kilit`. Each project has a copy-link button. Back/forward restores the selection.
+- Share a project with `?project=kilit&lang=tr#projects`. Slugs: `mixen`, `uni`, `trading-bot`, `stream-deck`, `rough-cut`, `exam-plan`, `kilit`, `model-tests`. Each project has a copy-link button. Back/forward restores the selection.
 - The map focuses the selected station, animates its active connections and has a reset-view control. Small screens use a spaced grid.
+- Model tests is a separate report page (`model-tests.html`) with a text benchmark and image and video outputs; its map card links to it.
 - Mixen and Kilit have labelled, local simulations. They do not call AI services, block real input or send the task text anywhere.
 
 ## Editing content
@@ -35,7 +36,7 @@ Bump the version query in `index.html` when changing scripts or CSS so returning
 
 ## Validation
 
-Browser checks for this update covered both languages, all seven projects at 320, 390, 700, 768, 901, 1024 and 1280px (98 layout states), all 14 project/language links, browser back/forward, clipboard copying, Mixen empty-input/completion, and Kilit locked/unlocked input handling. No station rectangle overlaps or horizontal overflow were observed in those states.
+Earlier browser checks covered both languages and the first seven projects at 320, 390, 700, 768, 901, 1024 and 1280px, the project/language links, browser back/forward, clipboard copying, Mixen empty-input/completion, and Kilit locked/unlocked input handling. No station rectangle overlaps or horizontal overflow were observed in those states. The Model tests page and its map card were checked in Chromium at 320, 375 and 1280px in both languages for horizontal overflow, console errors, failed requests and broken images.
 
 Static checks: `node --check i18n.js`, `node --check script.js`, `node --check lab.js`, `git diff --check`, unique HTML IDs, existing local assets and valid SVG markup.
 

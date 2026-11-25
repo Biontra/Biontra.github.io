@@ -12,10 +12,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap"></noscript>
-  <link rel="stylesheet" href="style.css?v=models-v1">
-  <script src="i18n.js?v=models-v1" defer></script>
-  <script src="script.js?v=models-v1" defer></script>
-  <script src="lab.js?v=models-v1" defer></script>
+  <link rel="stylesheet" href="style.css?v=models-v2">
+  <script src="i18n.js?v=models-v2" defer></script>
+  <script src="script.js?v=models-v2" defer></script>
+  <script src="lab.js?v=models-v2" defer></script>
 </head>
 <body id="top">
   <div class="sitebar">
@@ -288,9 +288,10 @@
             </div>
           </div>
           <h3><span data-i18n="Model tests">Model tests</span></h3>
-          <p><span data-i18n="The same tasks given to several AI models and scored by me: a text benchmark, image and video outputs and a repo review.">The same tasks given to several AI models and scored by me: a text benchmark, image and video outputs and a repo review.</span></p>
+          <p><span data-i18n="The same tasks given to several AI models: a text benchmark checked by a script, plus image and video outputs with first-assessment scores.">The same tasks given to several AI models: a text benchmark checked by a script, plus image and video outputs with first-assessment scores.</span></p>
           <div class="project-actions"><a class="project-button primary" href="model-tests.html"><span data-i18n="Open the results">Open the results</span> <span aria-hidden="true">↗</span></a></div>
-          <div class="project-facts"><div class="fact"><h4><span data-i18n="Why I built it">Why I built it</span></h4><p><span data-i18n="I wanted to compare models on the same prompt under the same conditions and say clearly what I did not measure.">I wanted to compare models on the same prompt under the same conditions and say clearly what I did not measure.</span></p></div></div>
+          <figure class="project-preview"><img src="assets/week3/foto-sdxl-turbo.jpg" width="1024" height="576" alt="SDXL-Turbo output for the market stall prompt" data-i18n-alt="SDXL-Turbo output for the market stall prompt" loading="lazy"><figcaption><span data-i18n="SDXL-Turbo output · 12/20">SDXL-Turbo output · 12/20</span></figcaption></figure>
+          <div class="project-facts"><div class="fact"><h4><span data-i18n="Why I built it">Why I built it</span></h4><p><span data-i18n="It started as a program task, but I wanted to see for myself how far small local models are from cloud models.">It started as a program task, but I wanted to see for myself how far small local models are from cloud models.</span></p></div><div class="fact"><h4><span data-i18n="Current status">Current status</span></h4><p><span data-i18n="I ran one round of tests; I have not checked the image and video scores by eye yet.">I ran one round of tests; I have not checked the image and video scores by eye yet.</span></p></div><details class="technical-details"><summary><span data-i18n="How it works">How it works</span></summary><div><span data-i18n="Text: 10 MIHENK questions, three runs per model (one for the Claude models); a script compares the answers with the answer key. Image and video: one prompt, seed 42 and 16:9 for the local models, one try each, scored 1 to 5 per criterion.">Text: 10 MIHENK questions, three runs per model (one for the Claude models); a script compares the answers with the answer key. Image and video: one prompt, seed 42 and 16:9 for the local models, one try each, scored 1 to 5 per criterion.</span></div></details></div>
           <ul class="tags" aria-label="Technologies" data-i18n-aria-label="Technologies">
             <li>Python</li><li>Ollama</li><li>Diffusers</li><li>PyTorch</li>
           </ul>

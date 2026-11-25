@@ -430,6 +430,7 @@ html { scroll-padding-top: 96px; }
 .map[data-project="rough-cut"] .station[aria-selected="true"] .icon .cut { animation-duration: .6s; }
 .map[data-project="exam-plan"] .station[aria-selected="true"] .icon { animation: station-float 3s ease-in-out infinite; }
 .map[data-project="kilit"] .station[aria-selected="true"] .icon .fill { animation: pulse 1s ease-in-out infinite; }
+.map[data-project="model-tests"] .station[aria-selected="true"] .icon .node { animation-duration: 1.2s; }
 .hud::before { content: none; }
 .project-share { margin-top: 24px; padding-top: 18px; border-top: 1px solid #4d647d; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; font-size: 0.9rem; }
 .copy-link { min-height: 40px; padding: 6px 12px; font: 600 0.85rem var(--sans); background: #0b1320; border: 1px solid #627b98; border-radius: 3px; color: var(--text); cursor: pointer; }
