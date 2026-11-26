@@ -45,7 +45,7 @@
     return button;
   });
   mapShell.append(mapHeading, map);
-  var hud = document.createElement('div'); hud.className = 'hud'; hud.id = 'station-panel'; hud.tabIndex = 0; hud.setAttribute('role', 'tabpanel');
+  var hud = document.createElement('div'); hud.className = 'hud'; hud.id = 'station-panel'; hud.setAttribute('role', 'tabpanel');
   lab.append(mapShell, hud); list.before(lab); list.hidden = true;
 
   function el(tag, className, key) {
@@ -71,7 +71,6 @@
   }
   function shareControl(index) {
     var share = el('div', 'project-share');
-    var link = el('a', '', 'Share project'); link.href = projectURL(index); link.setAttribute('aria-label', I.t('Share project') + ': ' + cards[index].dataset.short);
     var copy = el('button', 'copy-link', 'Copy link'); copy.type = 'button';
     var feedback = el('p', 'share-feedback'); feedback.setAttribute('role', 'status');
     copy.addEventListener('click', async function () {
@@ -87,7 +86,7 @@
         feedback.textContent = I.t('Copy this link');
       }
     });
-    share.append(link, copy, feedback);
+    share.append(copy, feedback);
     return share;
   }
   function makeDemo(slug) {

@@ -66,7 +66,6 @@ window.PortfolioTranslations = {
   "I write most of my code together with AI coding tools (Claude Code, Codex). What I try to own is the part they can't do for me: deciding what the tool should do, checking that it actually works, and fixing it when it doesn't.": "Kodlarımın çoğunu yapay zekâ araçlarıyla (Claude Code, Codex) birlikte yazıyorum. Benim üstlendiğim kısım, aracın ne yapacağına karar vermek, gerçekten çalıştığını kontrol etmek ve çalışmadığında düzeltmek.",
   "Right now I'm interested in AI agents, automation and security.": "Şu sıralar yapay zekâ ajanları, otomasyon ve güvenlikle ilgileniyorum.",
   "Made by Kaan, 2026.": "Kaan tarafından yapıldı, 2026.",
-  "Share project": "Projeyi paylaş",
   "Copy link": "Bağlantıyı kopyala",
   "Link copied": "Bağlantı kopyalandı",
   "Copy this link": "Bu bağlantıyı kopyala",

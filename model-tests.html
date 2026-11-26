@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Model tests · Kaan Yunus Emre Akgöz</title>
   <meta name="description" content="The same tasks given to several AI models: a 10-question text benchmark checked by a script, plus image and video outputs scored by an AI assistant and checked by me.">
+  <link rel="canonical" href="https://biontra.github.io/model-tests.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://biontra.github.io/model-tests.html">
+  <meta property="og:title" content="Model tests · Kaan Yunus Emre Akgöz">
+  <meta property="og:description" content="The same tasks given to several AI models: a 10-question text benchmark checked by a script, plus image and video outputs scored by an AI assistant and checked by me.">
+  <meta property="og:image" content="https://biontra.github.io/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="tr_TR">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#070b14">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23070b14'/%3E%3Cpath d='M16 5l9 5v12l-9 5-9-5V10z' fill='none' stroke='%233de8ff' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23ffb340'/%3E%3C/svg%3E">
@@ -13,13 +24,13 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap"></noscript>
   <link rel="stylesheet" href="style.css?v=polish-a2">
-  <script src="i18n.js?v=cards-v4" defer></script>
+  <script src="i18n.js?v=cards-v5" defer></script>
 </head>
 <body id="top">
   <div class="sitebar">
     <div class="wrap sitebar-inner">
-      <a class="wordmark" href="index.html" aria-label="Back to portfolio" data-i18n-aria-label="Back to portfolio"><img class="profile-avatar" src="assets/github-avatar.png" width="44" height="44" alt="Biontra GitHub profile photo" data-i18n-alt="Biontra GitHub profile photo"></a>
-      <div class="quick-contact"><a class="back-link" href="index.html"><span data-i18n="Back to portfolio">Back to portfolio</span></a></div>
+      <a class="wordmark" href="index.html?project=model-tests#projects" aria-label="Back to portfolio" data-i18n-aria-label="Back to portfolio"><img class="profile-avatar" src="assets/github-avatar.png" width="44" height="44" alt="Biontra GitHub profile photo" data-i18n-alt="Biontra GitHub profile photo"></a>
+      <div class="quick-contact"><a class="back-link" href="index.html?project=model-tests#projects"><span data-i18n="Back to portfolio">Back to portfolio</span></a></div>
       <div class="language-switch" role="group" aria-label="Language" data-i18n-aria-label="Language"><button type="button" data-lang="tr" aria-pressed="false">TR</button><button type="button" data-lang="en" aria-pressed="true">EN</button></div>
     </div>
   </div>
@@ -67,9 +78,9 @@
       <p class="mt-prompt"><code lang="en">A wide shot of a small street market stall at dusk. Exactly three red apples and two yellow lemons sit on a wooden table. A wooden sign above the stall reads "OPEN" in white capital letters. A smiling woman in a blue apron stands behind the table and waves her right hand. Warm lantern light, shallow depth of field.</code></p>
       <h3><span data-i18n="Images">Images</span></h3>
       <div class="mt-shots">
-        <figure><img src="assets/model-tests/foto-sdxl-turbo.jpg" width="1024" height="576" loading="lazy" alt="SDXL-Turbo output for the market stall prompt" data-i18n-alt="SDXL-Turbo output for the market stall prompt"><figcaption>SDXL-Turbo: 12/20</figcaption></figure>
-        <figure><img src="assets/model-tests/foto-sdxl-base.jpg" width="1024" height="576" loading="lazy" alt="SDXL base output for the market stall prompt" data-i18n-alt="SDXL base output for the market stall prompt"><figcaption>SDXL base: 9/20</figcaption></figure>
-        <figure><img src="assets/model-tests/foto-sd15.jpg" width="1024" height="576" loading="lazy" alt="SD 1.5 output for the market stall prompt" data-i18n-alt="SD 1.5 output for the market stall prompt"><figcaption>SD 1.5: 10/20</figcaption></figure>
+        <figure><img src="assets/model-tests/foto-sdxl-turbo.jpg" srcset="assets/model-tests/foto-sdxl-turbo-720.jpg 720w, assets/model-tests/foto-sdxl-turbo.jpg 1024w" sizes="(max-width: 640px) calc(100vw - 66px), 400px" width="1024" height="576" loading="lazy" alt="SDXL-Turbo output for the market stall prompt" data-i18n-alt="SDXL-Turbo output for the market stall prompt"><figcaption>SDXL-Turbo: 12/20</figcaption></figure>
+        <figure><img src="assets/model-tests/foto-sdxl-base.jpg" srcset="assets/model-tests/foto-sdxl-base-720.jpg 720w, assets/model-tests/foto-sdxl-base.jpg 1024w" sizes="(max-width: 640px) calc(100vw - 66px), 400px" width="1024" height="576" loading="lazy" alt="SDXL base output for the market stall prompt" data-i18n-alt="SDXL base output for the market stall prompt"><figcaption>SDXL base: 9/20</figcaption></figure>
+        <figure><img src="assets/model-tests/foto-sd15.jpg" srcset="assets/model-tests/foto-sd15-720.jpg 720w, assets/model-tests/foto-sd15.jpg 1024w" sizes="(max-width: 640px) calc(100vw - 66px), 400px" width="1024" height="576" loading="lazy" alt="SD 1.5 output for the market stall prompt" data-i18n-alt="SD 1.5 output for the market stall prompt"><figcaption>SD 1.5: 10/20</figcaption></figure>
       </div>
       <h3><span data-i18n="Video">Video</span></h3>
       <div class="mt-shots mt-videos">
@@ -101,6 +112,6 @@
       <p class="mt-note"><span data-i18n="Gemini Omni ran in the Gemini app (Pro subscription) with one try and no seed setting: the sign and the wave are right, the counts are wrong (4 apples and 3 lemons), and cost is 3 because it needs a paid subscription.">Gemini Omni ran in the Gemini app (Pro subscription) with one try and no seed setting: the sign and the wave are right, the counts are wrong (4 apples and 3 lemons), and cost is 3 because it needs a paid subscription.</span></p>
     </section>
   </main>
-  <footer class="wrap mt-foot"><a href="index.html"><span data-i18n="Back to portfolio">Back to portfolio</span></a> · <a href="#top"><span data-i18n="Back to top">Back to top</span></a></footer>
+  <footer class="wrap mt-foot"><a href="index.html?project=model-tests#projects"><span data-i18n="Back to portfolio">Back to portfolio</span></a> · <a href="#top"><span data-i18n="Back to top">Back to top</span></a></footer>
 </body>
 </html>
