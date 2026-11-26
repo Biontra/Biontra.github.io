@@ -554,3 +554,28 @@ html { scroll-padding-top: 96px; }
 .footer-links { list-style: none; margin: 56px 0 12px; padding: 0; display: flex; flex-wrap: wrap; gap: 0 24px; font-weight: 500; }
 .footer-links a { display: inline-flex; align-items: center; min-height: 44px; }
 @media (max-width: 700px) { .hero-about { font-size: 0.95rem; line-height: 1.6; margin-bottom: 14px; } .footer-links { margin-top: 40px; } }
+
+/* Phone only: tighter hero spacing so the first screen is not mostly header. */
+@media (max-width: 700px) {
+  .hero-inner { padding-top: 20px; padding-bottom: 20px; }
+  .hero .label { margin-bottom: 8px; }
+  .hero h1 { margin-bottom: 12px; }
+  .hero-contact { gap: 8px; margin-bottom: 14px; }
+  .hero-contact a { min-height: 42px; padding-top: 6px; padding-bottom: 6px; font-size: 0.95rem; }
+  .hero .lead { font-size: 1rem; line-height: 1.5; margin-bottom: 10px; }
+  .hero-about { font-size: 0.875rem; line-height: 1.5; margin-bottom: 10px; }
+  .hero-meta { font-size: 0.8rem; line-height: 1.45; margin-bottom: 14px; }
+}
+
+/* Score tables: swipe hint and right-edge fade, narrow screens only. */
+.swipe-note { display: none; }
+@media (max-width: 700px) {
+  .swipe-note { display: block; margin: 0 0 6px; color: var(--muted); font-size: 0.8rem; }
+  .table-scroll {
+    background:
+      linear-gradient(to right, var(--bg) 30%, rgba(7, 11, 20, 0)) left center / 28px 100% no-repeat local,
+      linear-gradient(to left, var(--bg) 30%, rgba(7, 11, 20, 0)) right center / 28px 100% no-repeat local,
+      linear-gradient(to right, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0)) left center / 14px 100% no-repeat scroll,
+      linear-gradient(to left, rgba(61, 232, 255, 0.35), rgba(61, 232, 255, 0)) right center / 14px 100% no-repeat scroll;
+  }
+}

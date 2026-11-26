@@ -158,6 +158,8 @@ window.PortfolioTranslations = {
   "Image model scores table": "Görsel modellerinin puan tablosu",
   "Video model scores table": "Video modellerinin puan tablosu",
   "Model tests": "Model testleri",
+  "Model tests · Kaan Yunus Emre Akgöz": "Model testleri · Kaan Yunus Emre Akgöz",
+  "Swipe the table sideways to see all columns.": "Tüm sütunları görmek için tabloyu yana kaydırın.",
   "I asked each model 10 questions from the MIHENK open set three times (the Claude models once) and report the median accuracy.": "Her modele MIHENK açık setinden 10 soruyu üç kez sordum (Claude modellerine bir kez) ve ortanca doğruluğu veriyorum.",
   "The three Gemini models scored 10/10 in every run and gpt-oss-120b-medium had a median of 9/10, while qwen3-8b, the best local model, had a median of 7/10 (best run 8/10). With only 10 questions and L2 as the hardest level in the MIHENK open set, the top models hit the ceiling and could not be told apart.": "Üç Gemini modeli her koşuda 10/10 yaptı, gpt-oss-120b-medium ortancada 9/10 aldı; en iyi yerel model qwen3-8b'nin ortancası 7/10 oldu (en iyi koşusu 8/10). Soru sayısı yalnızca 10 ve MIHENK açık setindeki en zor seviye L2 olduğu için üst modeller tavana vurdu, birbirinden ayrılamadı.",
   "Time is wall-clock time of the whole call, including model loading for local runs; the Claude models ran as Claude Code subagents with their own system prompt.": "Süre, çağrının başından sonuna geçen toplam süredir; yerel modellerde model yükleme de dahildir. Claude modelleri, kendi sistem prompt'larıyla Claude Code alt ajanı olarak çalıştı.",
@@ -200,6 +202,8 @@ window.PortfolioTranslations = {
     });
     document.documentElement.lang = language;
     document.querySelectorAll('[data-lang]').forEach(function (button) { button.setAttribute('aria-pressed', String(button.dataset.lang === language)); });
+    if (!document.documentElement.dataset.titleEn) document.documentElement.dataset.titleEn = document.title;
+    document.title = t(document.documentElement.dataset.titleEn);
     var description = document.querySelector('meta[name="description"]');
     if (description) { if (!description.dataset.en) description.dataset.en = description.content; description.content = t(description.dataset.en); }
   }

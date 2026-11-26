@@ -12,8 +12,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap"></noscript>
-  <link rel="stylesheet" href="style.css?v=models-v3">
-  <script src="i18n.js?v=models-v4" defer></script>
+  <link rel="stylesheet" href="style.css?v=fixes-v1">
+  <script src="i18n.js?v=fixes-v1" defer></script>
 </head>
 <body id="top">
   <div class="sitebar">
@@ -32,6 +32,7 @@
     <section class="mt-block" aria-labelledby="mt-bench">
       <h2 id="mt-bench"><span data-i18n="Prompt benchmark: 10 questions, 10 models">Prompt benchmark: 10 questions, 10 models</span></h2>
       <p><span data-i18n="I asked each model 10 questions from the MIHENK open set three times (the Claude models once) and report the median accuracy.">I asked each model 10 questions from the MIHENK open set three times (the Claude models once) and report the median accuracy.</span></p>
+      <p class="swipe-note"><span data-i18n="Swipe the table sideways to see all columns.">Swipe the table sideways to see all columns.</span></p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Benchmark results table" data-i18n-aria-label="Benchmark results table">
         <table class="mt-table">
           <caption class="sr-only"><span data-i18n="Accuracy, format, time and cost per model">Accuracy, format, time and cost per model</span></caption>
@@ -65,18 +66,19 @@
       <p class="mt-prompt"><code lang="en">A wide shot of a small street market stall at dusk. Exactly three red apples and two yellow lemons sit on a wooden table. A wooden sign above the stall reads "OPEN" in white capital letters. A smiling woman in a blue apron stands behind the table and waves her right hand. Warm lantern light, shallow depth of field.</code></p>
       <h3><span data-i18n="Images">Images</span></h3>
       <div class="mt-shots">
-        <figure><img src="assets/week3/foto-sdxl-turbo.jpg" width="1024" height="576" loading="lazy" alt="SDXL-Turbo output for the market stall prompt" data-i18n-alt="SDXL-Turbo output for the market stall prompt"><figcaption>SDXL-Turbo: 12/20</figcaption></figure>
-        <figure><img src="assets/week3/foto-sdxl-base.jpg" width="1024" height="576" loading="lazy" alt="SDXL base output for the market stall prompt" data-i18n-alt="SDXL base output for the market stall prompt"><figcaption>SDXL base: 9/20</figcaption></figure>
-        <figure><img src="assets/week3/foto-sd15.jpg" width="1024" height="576" loading="lazy" alt="SD 1.5 output for the market stall prompt" data-i18n-alt="SD 1.5 output for the market stall prompt"><figcaption>SD 1.5: 10/20</figcaption></figure>
+        <figure><img src="assets/model-tests/foto-sdxl-turbo.jpg" width="1024" height="576" loading="lazy" alt="SDXL-Turbo output for the market stall prompt" data-i18n-alt="SDXL-Turbo output for the market stall prompt"><figcaption>SDXL-Turbo: 12/20</figcaption></figure>
+        <figure><img src="assets/model-tests/foto-sdxl-base.jpg" width="1024" height="576" loading="lazy" alt="SDXL base output for the market stall prompt" data-i18n-alt="SDXL base output for the market stall prompt"><figcaption>SDXL base: 9/20</figcaption></figure>
+        <figure><img src="assets/model-tests/foto-sd15.jpg" width="1024" height="576" loading="lazy" alt="SD 1.5 output for the market stall prompt" data-i18n-alt="SD 1.5 output for the market stall prompt"><figcaption>SD 1.5: 10/20</figcaption></figure>
       </div>
       <h3><span data-i18n="Video">Video</span></h3>
       <div class="mt-shots mt-videos">
-        <figure><video controls muted playsinline preload="none" poster="assets/week3/video-zeroscope-poster.jpg" width="648" height="360" src="assets/week3/video-zeroscope.mp4"></video><figcaption>Zeroscope v2 576w: 10/25, <span data-i18n="1 second">1 second</span></figcaption></figure>
-        <figure><video controls muted playsinline preload="none" poster="assets/week3/video-animatediff-poster.jpg" width="640" height="360" src="assets/week3/video-animatediff.mp4"></video><figcaption>AnimateDiff (SD 1.5): 7/25, <span data-i18n="1 second">1 second</span></figcaption></figure>
-        <figure><video controls muted playsinline preload="none" poster="assets/week3/video-gemini-omni-poster.jpg" width="640" height="360" src="assets/week3/video-gemini-omni.mp4"></video><figcaption>Gemini Omni (<span data-i18n="cloud">cloud</span>): 21/25, <span data-i18n="10 seconds">10 seconds</span></figcaption></figure>
+        <figure><video controls muted playsinline preload="none" poster="assets/model-tests/video-zeroscope-poster.jpg" width="648" height="360" src="assets/model-tests/video-zeroscope.mp4"></video><figcaption>Zeroscope v2 576w: 10/25, <span data-i18n="1 second">1 second</span></figcaption></figure>
+        <figure><video controls muted playsinline preload="none" poster="assets/model-tests/video-animatediff-poster.jpg" width="640" height="360" src="assets/model-tests/video-animatediff.mp4"></video><figcaption>AnimateDiff (SD 1.5): 7/25, <span data-i18n="1 second">1 second</span></figcaption></figure>
+        <figure><video controls muted playsinline preload="none" poster="assets/model-tests/video-gemini-omni-poster.jpg" width="640" height="360" src="assets/model-tests/video-gemini-omni.mp4"></video><figcaption>Gemini Omni (<span data-i18n="cloud">cloud</span>): 21/25, <span data-i18n="10 seconds">10 seconds</span></figcaption></figure>
       </div>
       <h3><span data-i18n="Scores">Scores</span></h3>
       <p class="mt-note"><span data-i18n="An AI assistant gave the first image and video scores on a 1 to 5 scale per criterion, looking at frames rather than watching the videos; I then checked the scores myself.">An AI assistant gave the first image and video scores on a 1 to 5 scale per criterion, looking at frames rather than watching the videos; I then checked the scores myself.</span></p>
+      <p class="swipe-note"><span data-i18n="Swipe the table sideways to see all columns.">Swipe the table sideways to see all columns.</span></p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Image model scores table" data-i18n-aria-label="Image model scores table">
         <table class="mt-table"><thead><tr><th scope="col"><span data-i18n="Model">Model</span></th><th scope="col"><span data-i18n="Size">Size</span></th><th scope="col"><span data-i18n="Steps">Steps</span></th><th scope="col"><span data-i18n="Fidelity">Fidelity</span></th><th scope="col"><span data-i18n="Text and face">Text and face</span></th><th scope="col"><span data-i18n="Consistency">Consistency</span></th><th scope="col"><span data-i18n="Cost">Cost</span></th><th scope="col"><span data-i18n="Total">Total</span></th></tr></thead><tbody>
 <tr><th scope="row">SDXL-Turbo</th><td>1024x576</td><td>4</td><td>2</td><td>2</td><td>4</td><td>4*</td><td>12/20 (60%)</td></tr>
@@ -85,6 +87,7 @@
         </tbody></table>
       </div>
       <p class="mt-note"><span data-i18n="* Cost score estimated from step count because timing was lost; not verified.">* Cost score estimated from step count because timing was lost; not verified.</span></p>
+      <p class="swipe-note"><span data-i18n="Swipe the table sideways to see all columns.">Swipe the table sideways to see all columns.</span></p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Video model scores table" data-i18n-aria-label="Video model scores table">
         <table class="mt-table"><thead><tr><th scope="col"><span data-i18n="Model">Model</span></th><th scope="col"><span data-i18n="Size">Size</span></th><th scope="col"><span data-i18n="Steps">Steps</span></th><th scope="col"><span data-i18n="Frames">Frames</span></th><th scope="col"><span data-i18n="Time">Time</span></th><th scope="col"><span data-i18n="Fidelity">Fidelity</span></th><th scope="col"><span data-i18n="Text and face">Text and face</span></th><th scope="col"><span data-i18n="Motion">Motion</span></th><th scope="col"><span data-i18n="Consistency">Consistency</span></th><th scope="col"><span data-i18n="Cost">Cost</span></th><th scope="col"><span data-i18n="Total">Total</span></th></tr></thead><tbody>
 <tr><th scope="row">Zeroscope v2 576w</th><td>576x320</td><td>12</td><td><span data-i18n="8 frames, 8 fps (1 s)">8 frames, 8 fps (1 s)</span></td><td><span data-i18n="469.6 s (7.8 min)">469.6 s (7.8 min)</span></td><td>2</td><td>1</td><td>1</td><td>3</td><td>3</td><td>10/25 (40%)</td></tr>
