@@ -189,6 +189,7 @@ window.PortfolioTranslations = {
   var stored = '';
   try { stored = localStorage.getItem('portfolio-language') || ''; } catch (_) {}
   var requested = new URL(location.href).searchParams.get('lang');
+  if (['tr', 'en'].includes(requested)) { try { localStorage.setItem('portfolio-language', requested); } catch (_) {} }
   var language = ['tr', 'en'].includes(requested) ? requested : (['tr', 'en'].includes(stored) ? stored : (navigator.language.startsWith('tr') ? 'tr' : 'en'));
   function t(key) { return language === 'tr' ? (dictionary[key] || key) : key; }
   function apply(root) {

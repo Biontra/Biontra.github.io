@@ -233,6 +233,9 @@
   readLocation();
   // A direct project URL opens the lab, rather than leaving its selection below the fold.
   if (new URL(location.href).searchParams.has('project') || location.hash.startsWith('#project-')) {
-    requestAnimationFrame(function () { document.querySelector('#projects').scrollIntoView({ block: 'start', behavior: 'instant' }); });
+    requestAnimationFrame(function () {
+      // On narrow screens the details panel sits below the map, so bring the panel itself into view.
+      (compact.matches ? hud : document.querySelector('#projects')).scrollIntoView({ block: 'start', behavior: 'instant' });
+    });
   }
 })();
