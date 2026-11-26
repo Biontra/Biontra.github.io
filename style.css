@@ -564,11 +564,11 @@ html { scroll-padding-top: 96px; }
 /* Score tables: swipe hint and right-edge fade, narrow screens only. */
 .swipe-note { display: none; }
 @media (max-width: 700px) {
-  .swipe-note { display: block; margin: 0 0 6px; color: var(--muted); font-size: 0.8rem; }
+  .swipe-note { display: block; margin: 0 0 6px; color: var(--muted); font-size: 0.875rem; }
   .table-scroll {
     background:
-      linear-gradient(to right, var(--bg) 30%, rgba(7, 11, 20, 0)) left center / 28px 100% no-repeat local,
-      linear-gradient(to left, var(--bg) 30%, rgba(7, 11, 20, 0)) right center / 28px 100% no-repeat local,
+      linear-gradient(to right, var(--card) 30%, rgba(13, 22, 40, 0)) left center / 28px 100% no-repeat local,
+      linear-gradient(to left, var(--card) 30%, rgba(13, 22, 40, 0)) right center / 28px 100% no-repeat local,
       linear-gradient(to right, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0)) left center / 14px 100% no-repeat scroll,
       linear-gradient(to left, rgba(61, 232, 255, 0.35), rgba(61, 232, 255, 0)) right center / 14px 100% no-repeat scroll;
   }
