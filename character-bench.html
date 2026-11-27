@@ -23,8 +23,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap"></noscript>
-  <link rel="stylesheet" href="style.css?v=step-v3">
-  <script src="i18n.js?v=step-v3" defer></script>
+  <link rel="stylesheet" href="style.css?v=step-v4">
+  <script src="i18n.js?v=step-v4" defer></script>
 </head>
 <body id="top">
   <div class="sitebar">
@@ -45,7 +45,7 @@
       <h2 id="cb-what"><span data-i18n="What it measures">What it measures</span></h2>
       <p><span data-i18n="It asks two questions and scores them separately: did the model do the command, and did it keep the character while doing it?">It asks two questions and scores them separately: did the model do the command, and did it keep the character while doing it?</span></p>
       <p><span data-i18n="Input: one start image and 20 commands. The commands were written in Turkish; the models got an English translation. Each model got each command once: 100 attempts, 98 clips, 2 safety refusals.">Input: one start image and 20 commands. The commands were written in Turkish; the models got an English translation. Each model got each command once: 100 attempts, 98 clips, 2 safety refusals.</span></p>
-      <p class="mt-note"><span data-i18n="It does not measure general video quality, audio or speed. Price is not part of the score; the chart only shows the credits spent. The judge looks only at frames; for the two models where audio could not be turned off, it was removed afterwards.">It does not measure general video quality, audio or speed. Price is not part of the score; the chart only shows the credits spent. The judge looks only at frames; for the two models where audio could not be turned off, it was removed afterwards.</span></p>
+      <p class="mt-note"><span data-i18n="It does not measure general video quality, audio or speed. Price is not part of the score; the chart shows credits per kept-character answer next to the scores. The judge looks only at frames; for the two models where audio could not be turned off, it was removed afterwards.">It does not measure general video quality, audio or speed. Price is not part of the score; the chart shows credits per kept-character answer next to the scores. The judge looks only at frames; for the two models where audio could not be turned off, it was removed afterwards.</span></p>
     </section>
 
     <section class="mt-block" aria-labelledby="cb-how">
@@ -74,9 +74,9 @@
         </table>
       </div>
       <p class="mt-note"><span data-i18n="In brackets: correct answers over scored answers. The denominators differ between models because some answers do not count (not visible, no judge answer, or invalid because there was no action), and because Gemini's 2 ungenerated clips count as not done in Did the command and are left out of Kept the character. There was one try per command, so small differences between models were not tested for significance.">In brackets: correct answers over scored answers. The denominators differ between models because some answers do not count (not visible, no judge answer, or invalid because there was no action), and because Gemini's 2 ungenerated clips count as not done in Did the command and are left out of Kept the character. There was one try per command, so small differences between models were not tested for significance.</span></p>
-      <p class="mt-note"><span data-i18n="Read Seedance 2.0 Mini's Kept the character score with one note: its first frame is not identical to the start image, mostly in the face, hair and clothing.">Read Seedance 2.0 Mini's Kept the character score with one note: its first frame is not identical to the start image, mostly in the face, hair and clothing.</span></p>
+      <p class="mt-note"><span data-i18n="Read Seedance 2.0 Mini's Kept the character score with one note: its first frame is not identical to the start image, mostly in the face, hair and clothing. The judge uses each clip's first frame as the reference, so a change already in that frame is not penalised in Kept the character.">Read Seedance 2.0 Mini's Kept the character score with one note: its first frame is not identical to the start image, mostly in the face, hair and clothing. The judge uses each clip's first frame as the reference, so a change already in that frame is not penalised in Kept the character.</span></p>
       <h3><span data-i18n="Chart">Chart</span></h3>
-      <p class="swipe-note chart-swipe"><span data-i18n="Swipe the chart sideways to see all of it.">Swipe the chart sideways to see all of it.</span></p>
+      <p class="swipe-note chart-swipe"><span data-i18n="Scroll the chart sideways to see all of it.">Scroll the chart sideways to see all of it.</span></p>
       <figure class="mt-chart" tabindex="0" role="region" aria-label="Character bench results chart" data-i18n-aria-label="Character bench results chart"><img src="assets/character-bench/grafik.svg" width="1978" height="420" loading="lazy" alt="Bar chart with Turkish labels. Left, on a 0 to 100 percent axis: did the command and kept the character for each of the five models, as separate bars. Right, on its own axis: Higgsfield credits per kept-character answer, from 0.34 for Seedance 2.0 Mini to 0.81 for Gemini Omni Flash 1.2." data-i18n-alt="Bar chart with Turkish labels. Left, on a 0 to 100 percent axis: did the command and kept the character for each of the five models, as separate bars. Right, on its own axis: Higgsfield credits per kept-character answer, from 0.34 for Seedance 2.0 Mini to 0.81 for Gemini Omni Flash 1.2."><figcaption><span data-i18n="Chart labels are in Turkish. Cost is in Higgsfield credits, not converted to USD, and is not part of the score.">Chart labels are in Turkish. Cost is in Higgsfield credits, not converted to USD, and is not part of the score.</span></figcaption></figure>
     </section>
 
