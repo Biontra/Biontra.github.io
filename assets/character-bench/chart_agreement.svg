@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 143" role="img" aria-label="Bar showing human and judge agreement of 80.2 percent against a threshold of 85 percent.">
+<title>Bar showing human and judge agreement of 80.2 percent against a threshold of 85 percent.</title>
+<style>
+.bg{fill:#0c1424}.t1{fill:#f0efec}.t2{fill:#c3c2b7}.grid{stroke:#343432}.track{stroke:#4a4a47}
+.a{fill:#3987e5}.b{fill:#d95926}.n{fill:#8f8e88}.ring{stroke:#0c1424}.mark{stroke:#f0efec}
+text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.h{font-size:15px;font-weight:600}.s{font-size:11.5px}.l{font-size:13px}.v{font-size:13px;font-weight:600}
+.ax{font-size:11px}
+</style>
+<rect class="bg" width="480" height="143" rx="8"/>
+<text class="t1 h" x="16" y="28">Human and judge agreed on 80.2%,</text>
+<text class="t1 h" x="16" y="48">below the 85% set in advance</text>
+<text class="t2 s" x="16" y="68">Share of 343 answers on 20 clips where my hand score and the judge matched.</text>
+<text class="t1 l" x="168" y="106" text-anchor="end">Agreement</text>
+<path class="a" d="M178,94 h177.2 a4,4 0 0 1 4,4 v8 a4,4 0 0 1 -4,4 h-177.2 z"/>
+<text class="t1 v" x="378.1" y="107">80.2%</text>
+<line class="grid" x1="178" y1="89" x2="178" y2="117"/>
+<line class="mark" x1="370.1" y1="87" x2="370.1" y2="119" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text class="t2 ax" x="370.1" y="133" text-anchor="middle">threshold 85%</text>
+</svg>

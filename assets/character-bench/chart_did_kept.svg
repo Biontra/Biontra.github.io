@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 390" role="img" aria-label="Dot plot of two scores for five video models: did the command and kept the character.">
+<title>Dot plot of two scores for five video models: did the command and kept the character.</title>
+<style>
+.bg{fill:#0c1424}.t1{fill:#f0efec}.t2{fill:#c3c2b7}.grid{stroke:#343432}.track{stroke:#4a4a47}
+.a{fill:#3987e5}.b{fill:#d95926}.n{fill:#8f8e88}.ring{stroke:#0c1424}.mark{stroke:#f0efec}
+text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.h{font-size:15px;font-weight:600}.s{font-size:11.5px}.l{font-size:13px}.v{font-size:13px;font-weight:600}
+.ax{font-size:11px}
+</style>
+<rect class="bg" width="480" height="390" rx="8"/>
+<text class="t1 h" x="16" y="28">Kling did every command</text>
+<text class="t1 h" x="16" y="48">but kept the character least</text>
+<text class="t2 s" x="16" y="68">Correct judge answers per model, in %. The axis starts at 75.</text>
+<text class="t2 s" x="16" y="83">One try per command, so small gaps are not a ranking.</text>
+<circle class="a" cx="31" cy="108" r="5"/><text class="t2 s" x="41" y="112">Did the command</text>
+<circle class="b" cx="161" cy="108" r="5"/><text class="t2 s" x="171" y="112">Kept the character</text>
+<text class="t2 s" x="408" y="112" text-anchor="end">Did</text><text class="t2 s" x="464" y="112" text-anchor="end">Kept</text>
+<line class="grid" x1="26.0" y1="130" x2="26.0" y2="360"/>
+<text class="t2 ax" x="26.0" y="375" text-anchor="middle">75%</text>
+<line class="grid" x1="92.0" y1="130" x2="92.0" y2="360"/>
+<text class="t2 ax" x="92.0" y="375" text-anchor="middle">80%</text>
+<line class="grid" x1="158.0" y1="130" x2="158.0" y2="360"/>
+<text class="t2 ax" x="158.0" y="375" text-anchor="middle">85%</text>
+<line class="grid" x1="224.0" y1="130" x2="224.0" y2="360"/>
+<text class="t2 ax" x="224.0" y="375" text-anchor="middle">90%</text>
+<line class="grid" x1="290.0" y1="130" x2="290.0" y2="360"/>
+<text class="t2 ax" x="290.0" y="375" text-anchor="middle">95%</text>
+<line class="grid" x1="356.0" y1="130" x2="356.0" y2="360"/>
+<text class="t2 ax" x="356.0" y="375" text-anchor="middle">100%</text>
+<text class="t1 l" x="26" y="147">Seedance 2.0 Mini</text>
+<line class="track" x1="296.0" y1="162" x2="303.9" y2="162" stroke-width="2"/>
+<circle class="a ring" cx="296.0" cy="162" r="6" stroke-width="2"/>
+<circle class="b ring" cx="303.9" cy="162" r="6" stroke-width="2"/>
+<text class="t1 v" x="408" y="166" text-anchor="end">95.5</text>
+<text class="t1 v" x="464" y="166" text-anchor="end">96.1</text>
+<text class="t1 l" x="26" y="193">Grok Video 1.5 Lite</text>
+<line class="track" x1="224.0" y1="208" x2="280.7" y2="208" stroke-width="2"/>
+<circle class="a ring" cx="224.0" cy="208" r="6" stroke-width="2"/>
+<circle class="b ring" cx="280.7" cy="208" r="6" stroke-width="2"/>
+<text class="t1 v" x="408" y="212" text-anchor="end">90.0</text>
+<text class="t1 v" x="464" y="212" text-anchor="end">94.3</text>
+<text class="t1 l" x="26" y="239">Wan 3.0</text>
+<line class="track" x1="236.0" y1="254" x2="252.1" y2="254" stroke-width="2"/>
+<circle class="a ring" cx="236.0" cy="254" r="6" stroke-width="2"/>
+<circle class="b ring" cx="252.1" cy="254" r="6" stroke-width="2"/>
+<text class="t1 v" x="408" y="258" text-anchor="end">90.9</text>
+<text class="t1 v" x="464" y="258" text-anchor="end">92.1</text>
+<text class="t1 l" x="26" y="285">Gemini Omni Flash 1.2  (18/20 clips made)</text>
+<line class="track" x1="176.0" y1="300" x2="236.0" y2="300" stroke-width="2"/>
+<circle class="a ring" cx="176.0" cy="300" r="6" stroke-width="2"/>
+<circle class="b ring" cx="236.0" cy="300" r="6" stroke-width="2"/>
+<text class="t1 v" x="408" y="304" text-anchor="end">86.4</text>
+<text class="t1 v" x="464" y="304" text-anchor="end">90.9</text>
+<text class="t1 l" x="26" y="331">Kling 3.0</text>
+<line class="track" x1="146.2" y1="346" x2="356.0" y2="346" stroke-width="2"/>
+<circle class="a ring" cx="356.0" cy="346" r="6" stroke-width="2"/>
+<circle class="b ring" cx="146.2" cy="346" r="6" stroke-width="2"/>
+<text class="t1 v" x="408" y="350" text-anchor="end">100.0</text>
+<text class="t1 v" x="464" y="350" text-anchor="end">84.1</text>
+</svg>

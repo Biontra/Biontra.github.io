@@ -585,3 +585,9 @@ html { scroll-padding-top: 96px; }
 .mt-chart img { display: block; width: 2200px; max-width: none; height: auto; }
 .mt-warn { margin: 0 0 14px; max-width: 70ch; padding: 8px 12px; border-left: 3px solid var(--amber); color: var(--text); font-weight: 500; }
 .mt-chart figcaption { color: #444; font-size: 0.85rem; padding-top: 6px; }
+
+/* Character bench: narrow charts that already carry the site's dark palette */
+.cb-charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 480px)); gap: 16px; margin: 8px 0 14px; }
+.cb-charts figure { margin: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.cb-charts img { display: block; width: 100%; height: auto; }
+.cb-preview img { max-width: 480px; margin: 0 auto; }

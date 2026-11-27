@@ -23,8 +23,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap"></noscript>
-  <link rel="stylesheet" href="style.css?v=step-v4">
-  <script src="i18n.js?v=step-v4" defer></script>
+  <link rel="stylesheet" href="style.css?v=step-v5">
+  <script src="i18n.js?v=step-v5" defer></script>
 </head>
 <body id="top">
   <div class="sitebar">
@@ -76,16 +76,47 @@
       <p class="mt-note"><span data-i18n="In brackets: correct answers over scored answers. The denominators differ between models because some answers do not count (not visible, no judge answer, or invalid because there was no action), and because Gemini's 2 ungenerated clips count as not done in Did the command and are left out of Kept the character. There was one try per command, so small differences between models were not tested for significance.">In brackets: correct answers over scored answers. The denominators differ between models because some answers do not count (not visible, no judge answer, or invalid because there was no action), and because Gemini's 2 ungenerated clips count as not done in Did the command and are left out of Kept the character. There was one try per command, so small differences between models were not tested for significance.</span></p>
       <p class="mt-note"><span data-i18n="Read Seedance 2.0 Mini's Kept the character score with one note: its first frame is not identical to the start image, mostly in the face, hair and clothing. The judge uses each clip's first frame as the reference, so a change already in that frame is not penalised in Kept the character.">Read Seedance 2.0 Mini's Kept the character score with one note: its first frame is not identical to the start image, mostly in the face, hair and clothing. The judge uses each clip's first frame as the reference, so a change already in that frame is not penalised in Kept the character.</span></p>
       <h3><span data-i18n="Chart">Chart</span></h3>
-      <p class="swipe-note chart-swipe"><span data-i18n="Scroll the chart sideways to see all of it.">Scroll the chart sideways to see all of it.</span></p>
-      <figure class="mt-chart" tabindex="0" role="region" aria-label="Character bench results chart" data-i18n-aria-label="Character bench results chart"><img src="assets/character-bench/grafik.svg" width="1978" height="420" loading="lazy" alt="Bar chart with Turkish labels. Left, on a 0 to 100 percent axis: did the command and kept the character for each of the five models, as separate bars. Right, on its own axis: Higgsfield credits per kept-character answer, from 0.34 for Seedance 2.0 Mini to 0.81 for Gemini Omni Flash 1.2." data-i18n-alt="Bar chart with Turkish labels. Left, on a 0 to 100 percent axis: did the command and kept the character for each of the five models, as separate bars. Right, on its own axis: Higgsfield credits per kept-character answer, from 0.34 for Seedance 2.0 Mini to 0.81 for Gemini Omni Flash 1.2."><figcaption><span data-i18n="Chart labels are in Turkish. Cost is in Higgsfield credits, not converted to USD, and is not part of the score.">Chart labels are in Turkish. Cost is in Higgsfield credits, not converted to USD, and is not part of the score.</span></figcaption></figure>
+      <div class="cb-charts">
+        <figure><img src="assets/character-bench/chart_did_kept.svg" width="480" height="390" loading="lazy" alt="Dot plot, axis from 75 to 100 percent. Seedance 2.0 Mini 95.5 did and 96.1 kept; Grok Video 1.5 Lite 90.0 and 94.3; Wan 3.0 90.9 and 92.1; Gemini Omni Flash 1.2 86.4 and 90.9; Kling 3.0 100.0 did and 84.1 kept." data-i18n-alt="Dot plot, axis from 75 to 100 percent. Seedance 2.0 Mini 95.5 did and 96.1 kept; Grok Video 1.5 Lite 90.0 and 94.3; Wan 3.0 90.9 and 92.1; Gemini Omni Flash 1.2 86.4 and 90.9; Kling 3.0 100.0 did and 84.1 kept."></figure>
+        <figure><img src="assets/character-bench/chart_cost.svg" width="480" height="256" loading="lazy" alt="Bar chart of Higgsfield credits per correct kept-the-character answer: Seedance 2.0 Mini 0.34, Grok Video 1.5 Lite 0.40, Wan 3.0 0.53, Kling 3.0 0.59, Gemini Omni Flash 1.2 0.81." data-i18n-alt="Bar chart of Higgsfield credits per correct kept-the-character answer: Seedance 2.0 Mini 0.34, Grok Video 1.5 Lite 0.40, Wan 3.0 0.53, Kling 3.0 0.59, Gemini Omni Flash 1.2 0.81."></figure>
+      </div>
+      <p class="mt-note"><span data-i18n="Chart labels are in English. Cost is in Higgsfield credits, not converted to USD, and is not part of the score.">Chart labels are in English. Cost is in Higgsfield credits, not converted to USD, and is not part of the score.</span></p>
+    </section>
+
+    <section class="mt-block" aria-labelledby="cb-findings">
+      <h2 id="cb-findings"><span data-i18n="Findings">Findings</span></h2>
+      <ul class="mt-links">
+        <li><span data-i18n="Doing the command and keeping the character are different skills. Kling 3.0 did every command (100%) and kept the character least (84.1%).">Doing the command and keeping the character are different skills. Kling 3.0 did every command (100%) and kept the character least (84.1%).</span></li>
+        <li><span data-i18n="Seedance 2.0 Mini kept the character best (96.1%) and was the cheapest per correct character answer (0.34 credits). Gemini Omni Flash 1.2 was the most expensive (0.81).">Seedance 2.0 Mini kept the character best (96.1%) and was the cheapest per correct character answer (0.34 credits). Gemini Omni Flash 1.2 was the most expensive (0.81).</span></li>
+        <li><span data-i18n="Questions written for one specific command were the hardest for every model: all five score lower on them than on the questions asked for every clip.">Questions written for one specific command were the hardest for every model: all five score lower on them than on the questions asked for every clip.</span></li>
+        <li><span data-i18n="Gemini Omni Flash 1.2 refused 2 of the 20 commands (safety filter). A refused command counts as not done.">Gemini Omni Flash 1.2 refused 2 of the 20 commands (safety filter). A refused command counts as not done.</span></li>
+        <li><span data-i18n="The judge is not good enough to rank close models: it agreed with my hand scores on 80.2% of answers, and I had set 85% in advance.">The judge is not good enough to rank close models: it agreed with my hand scores on 80.2% of answers, and I had set 85% in advance.</span></li>
+      </ul>
+    </section>
+
+    <section class="mt-block" aria-labelledby="cb-examples">
+      <h2 id="cb-examples"><span data-i18n="Example questions">Example questions</span></h2>
+      <p><span data-i18n="The benchmark questions are private. I wrote 60 more questions of the same kind for the shared NEXA benchmark; those are public and are not part of the private set. Two of the ones I wrote by hand:">The benchmark questions are private. I wrote 60 more questions of the same kind for the shared NEXA benchmark; those are public and are not part of the private set. Two of the ones I wrote by hand:</span></p>
+      <ul class="mt-links">
+        <li><span data-i18n="A man with curly hair and a red sweater stands in a kitchen. Command: he opens the fridge, takes a tomato and bites it. The video must get right: he takes one tomato; juice runs from where he bit; the inside of the tomato is not broken.">A man with curly hair and a red sweater stands in a kitchen. Command: he opens the fridge, takes a tomato and bites it. The video must get right: he takes one tomato; juice runs from where he bit; the inside of the tomato is not broken.</span></li>
+        <li><span data-i18n="Same man, same kitchen. Command: he cracks an egg into the pan. The video must get right: the egg white sets in a believable shape; the shell breaks properly; the egg flows properly.">Same man, same kitchen. Command: he cracks an egg into the pan. The video must get right: the egg white sets in a believable shape; the shell breaks properly; the egg flows properly.</span></li>
+      </ul>
+      <p><a href="https://github.com/nexa-lab-ai/nexa-bench/blob/main/sorular/Biontra.csv" rel="noopener"><span data-i18n="All 60 public questions">All 60 public questions</span></a> <span data-i18n="10 written by hand, 50 synthetic">10 written by hand, 50 synthetic</span></p>
     </section>
 
     <section class="mt-block" aria-labelledby="cb-human">
       <h2 id="cb-human"><span data-i18n="Human check: did not pass">Human check: did not pass</span></h2>
+      <div class="cb-charts"><figure><img src="assets/character-bench/chart_agreement.svg" width="480" height="143" loading="lazy" alt="Bar: human and judge agreement 80.2 percent, with a marker at the 85 percent threshold." data-i18n-alt="Bar: human and judge agreement 80.2 percent, with a marker at the 85 percent threshold."></figure></div>
       <p><span data-i18n="I scored 20 clips by hand, chosen by code with a fixed seed, without seeing the judge's answers. Human and judge agreed on 80.2% of answers (275/343). The threshold I wrote down in advance was 85%, so the check did not pass.">I scored 20 clips by hand, chosen by code with a fixed seed, without seeing the judge's answers. Human and judge agreed on 80.2% of answers (275/343). The threshold I wrote down in advance was 85%, so the check did not pass.</span></p>
       <p><span data-i18n="Most of the gap comes from 39 answers the judge never gave in these 20 clips (2 of the 20 got no judge answers at all); each of them counts as a disagreement. Where the judge did answer, agreement is 90.5% (275/304). That is not the number I committed to, so it does not replace 80.2%.">Most of the gap comes from 39 answers the judge never gave in these 20 clips (2 of the 20 got no judge answers at all); each of them counts as a disagreement. Where the judge did answer, agreement is 90.5% (275/304). That is not the number I committed to, so it does not replace 80.2%.</span></p>
       <p><span data-i18n="So the table above is one judge's reading that matches a human 80.2% of the time. It is not a firm ranking.">So the table above is one judge's reading that matches a human 80.2% of the time. It is not a firm ranking.</span></p>
       <p class="mt-note"><span data-i18n="Before scoring I had watched about 60 to 70 of the 98 videos, so my answers may have used things the frames do not show, such as motion or sound. The judge saw only frames.">Before scoring I had watched about 60 to 70 of the 98 videos, so my answers may have used things the frames do not show, such as motion or sound. The judge saw only frames.</span></p>
+    </section>
+
+    <section class="mt-block" aria-labelledby="cb-local">
+      <h2 id="cb-local"><span data-i18n="Side test: local models as the judge">Side test: local models as the judge</span></h2>
+      <p><span data-i18n="I also asked six open-source vision models on my laptop to answer 10 of the check questions. None beat a coin flip: the best got 5 of 10, and the Claude judge got 8 of 10 on the same questions. The local models saw 3 frames per clip, the judge saw about 50, so this is not an equal comparison.">I also asked six open-source vision models on my laptop to answer 10 of the check questions. None beat a coin flip: the best got 5 of 10, and the Claude judge got 8 of 10 on the same questions. The local models saw 3 frames per clip, the judge saw about 50, so this is not an equal comparison.</span></p>
+      <div class="cb-charts"><figure><img src="assets/character-bench/chart_local_judges.svg" width="480" height="326" loading="lazy" alt="Bar chart of correct answers out of 10: Claude Sonnet 8, llava 5, qwen2.5vl 5, gemma3 3, granite3.2-vision 0, moondream 0, llava-phi3 0. A dashed line marks 5, a coin flip." data-i18n-alt="Bar chart of correct answers out of 10: Claude Sonnet 8, llava 5, qwen2.5vl 5, gemma3 3, granite3.2-vision 0, moondream 0, llava-phi3 0. A dashed line marks 5, a coin flip."></figure></div>
     </section>
 
     <section class="mt-block" aria-labelledby="cb-limits">
@@ -98,6 +129,8 @@
       <ul class="mt-links">
         <li><a href="https://github.com/Biontra/character-consistency-bench" rel="noopener"><span data-i18n="Code on GitHub">Code on GitHub</span></a> <span data-i18n="the code, the rules, the 20 commands, the results and the SHA-256 fingerprints of the private files">the code, the rules, the 20 commands, the results and the SHA-256 fingerprints of the private files</span></li>
         <li><a href="https://huggingface.co/datasets/Biontra/character-consistency-bench" rel="noopener"><span data-i18n="Dataset on Hugging Face">Dataset on Hugging Face</span></a> <span data-i18n="the page is public; the files open only after I approve an access request, and the license is evaluation only">the page is public; the files open only after I approve an access request, and the license is evaluation only</span></li>
+        <li><a href="https://github.com/Biontra/character-consistency-bench/blob/main/docs/DETAILS.md" rel="noopener"><span data-i18n="Method in detail">Method in detail</span></a> <span data-i18n="question types, scoring rules and the result by question type">question types, scoring rules and the result by question type</span></li>
+        <li><a href="https://github.com/nexa-lab-ai/nexa-bench/blob/main/sorular/Biontra.csv" rel="noopener"><span data-i18n="Public sample questions">Public sample questions</span></a> <span data-i18n="60 questions in the shared NEXA benchmark">60 questions in the shared NEXA benchmark</span></li>
       </ul>
     </section>
   </main>
