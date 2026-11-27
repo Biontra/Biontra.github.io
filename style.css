@@ -521,14 +521,14 @@ html { scroll-padding-top: 96px; }
 .mt-block { margin-top: 48px; padding: 26px 16px; border: 1px solid var(--line); background: var(--card); min-width: 0; }
 .mt-block h2 { font-size: 1.15rem; line-height: 1.35; margin: 0 0 16px; }
 .mt-block p { max-width: 70ch; margin: 0 0 14px; overflow-wrap: anywhere; }
-.mt-shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 8px; }
+.mt-shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 16px; margin-top: 8px; }
 .mt-shots figure { margin: 0; }
 .mt-shots img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
 .mt-shots figcaption { margin-top: 8px; font-size: 0.9rem; color: var(--muted); }
 .mt-block h3 { font-size: 1.05rem; margin: 24px 0 10px; color: var(--amber); }
 .mt-prompt code { display: block; padding: 12px 14px; border: 1px solid var(--line); font-family: var(--mono); font-size: 0.85rem; overflow-wrap: anywhere; white-space: normal; }
 .mt-shots video { display: block; width: 100%; height: auto; background: #000; border: 1px solid var(--line); }
-.mt-videos { grid-template-columns: repeat(auto-fit, minmax(260px, 480px)); }
+.mt-videos { grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 480px)); }
 .table-scroll { overflow-x: auto; max-width: 100%; border: 1px solid var(--line); margin-bottom: 12px; }
 .mt-table { border-collapse: collapse; width: 100%; min-width: 680px; font-size: 0.9rem; }
 .mt-table th, .mt-table td { padding: 9px 10px; border-bottom: 1px solid #2a3d5c; text-align: left; vertical-align: top; }
