@@ -97,8 +97,14 @@
       var label = el('span', '', spec[1]);
       if (spec[0] === 'prev') button.append(arrow, label); else button.append(label, arrow);
       button.addEventListener('click', function () {
-        select((current + spec[3] + tabs.length) % tabs.length, { push: true, user: true });
+        // Step buttons keep the panel top in view with one instant scroll, after focus has moved. A smooth scroll can be overridden by the browser's own focus scroll that a keyboard press may still have in flight.
+        select((current + spec[3] + tabs.length) % tabs.length, { push: true });
         var again = hud.querySelector('.project-step-' + spec[0]); if (again) again.focus({ preventScroll: true });
+        if (compact.matches) {
+          var toTop = function () { hud.scrollIntoView({ block: 'start', behavior: 'instant' }); };
+          // Jump one pixel away first: scrolling to the spot we already hold does not cancel a smooth scroll the browser has queued.
+          window.scrollBy({ top: 1, behavior: 'instant' }); toTop(); requestAnimationFrame(toTop);
+        }
       });
       nav.append(button);
     });
