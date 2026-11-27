@@ -21,9 +21,9 @@ Then open http://localhost:8000.
 ## Portfolio features
 
 - TR/EN switches all page copy, project details, controls and workflow diagrams. The selection is saved in the browser. `?lang=tr` or `?lang=en` explicitly selects a language.
-- Share a project with `?project=kilit&lang=tr#projects`. Slugs: `mixen`, `uni`, `trading-bot`, `stream-deck`, `rough-cut`, `exam-plan`, `kilit`, `model-tests`. Each project has a copy-link button. Back/forward restores the selection.
+- Share a project with `?project=kilit&lang=tr#projects`. Slugs: `mixen`, `uni`, `trading-bot`, `stream-deck`, `rough-cut`, `exam-plan`, `kilit`, `model-tests`, `character-bench`. Each project has a copy-link button. Back/forward restores the selection.
 - The map focuses the selected station, animates its active connections and has a reset-view control. Small screens use a spaced grid.
-- Model tests is a separate report page (`model-tests.html`) with a text benchmark and image and video outputs; its map card links to it.
+- Model tests is a separate report page (`model-tests.html`) with a text benchmark and image and video outputs; its map card links to it. Character bench (`character-bench.html`) is a second report page for the Week 4 video-model character-consistency benchmark.
 - Mixen and Kilit have labelled, local simulations. They do not call AI services, block real input or send the task text anywhere.
 
 ## Editing content

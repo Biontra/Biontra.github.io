@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Character consistency bench · Kaan Yunus Emre Akgöz</title>
+  <meta name="description" content="A small benchmark that checks whether five video models do a command and keep the same character while doing it. Claude judged the frames; the human check did not pass.">
+  <link rel="canonical" href="https://biontra.github.io/character-bench.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://biontra.github.io/character-bench.html">
+  <meta property="og:title" content="Character consistency bench · Kaan Yunus Emre Akgöz">
+  <meta property="og:description" content="A small benchmark that checks whether five video models do a command and keep the same character while doing it. Claude judged the frames; the human check did not pass.">
+  <meta property="og:image" content="https://biontra.github.io/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="tr_TR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#070b14">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23070b14'/%3E%3Cpath d='M16 5l9 5v12l-9 5-9-5V10z' fill='none' stroke='%233de8ff' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23ffb340'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap"></noscript>
+  <link rel="stylesheet" href="style.css?v=step-v2">
+  <script src="i18n.js?v=step-v2" defer></script>
+</head>
+<body id="top">
+  <div class="sitebar">
+    <div class="wrap sitebar-inner">
+      <a class="wordmark" href="index.html?project=character-bench#projects" aria-label="Back to portfolio" data-i18n-aria-label="Back to portfolio"><img class="profile-avatar" src="assets/github-avatar.png" width="44" height="44" alt="Biontra GitHub profile photo" data-i18n-alt="Biontra GitHub profile photo"></a>
+      <div class="quick-contact"><a class="back-link" href="index.html?project=character-bench#projects"><span data-i18n="Back to portfolio">Back to portfolio</span></a></div>
+      <div class="language-switch" role="group" aria-label="Language" data-i18n-aria-label="Language"><button type="button" data-lang="tr" aria-pressed="false">TR</button><button type="button" data-lang="en" aria-pressed="true">EN</button></div>
+    </div>
+  </div>
+  <main id="main" class="wrap mt-page">
+    <header class="mt-head">
+      <h1><span data-i18n="Character consistency bench">Character consistency bench</span></h1>
+      <p class="section-intro"><span data-i18n="TUTAR is a small benchmark that checks whether video models can keep a character intact while making that character do something. Five models, one character (Aikyo), 20 commands.">TUTAR is a small benchmark that checks whether video models can keep a character intact while making that character do something. Five models, one character (Aikyo), 20 commands.</span></p>
+    </header>
+
+    <section class="mt-block" aria-labelledby="cb-what">
+      <h2 id="cb-what"><span data-i18n="What it measures">What it measures</span></h2>
+      <p><span data-i18n="It asks two questions and scores them separately: did the model do the command, and did it keep the character while doing it?">It asks two questions and scores them separately: did the model do the command, and did it keep the character while doing it?</span></p>
+      <p><span data-i18n="Input: one start image and 20 commands. The commands were written in Turkish; the models got an English translation. Each model got each command once: 100 attempts, 98 clips, 2 safety refusals.">Input: one start image and 20 commands. The commands were written in Turkish; the models got an English translation. Each model got each command once: 100 attempts, 98 clips, 2 safety refusals.</span></p>
+      <p class="mt-note"><span data-i18n="It does not measure general video quality, audio, speed or price. The judge looks only at frames; for the two models where audio could not be turned off, it was removed afterwards.">It does not measure general video quality, audio, speed or price. The judge looks only at frames; for the two models where audio could not be turned off, it was removed afterwards.</span></p>
+    </section>
+
+    <section class="mt-block" aria-labelledby="cb-how">
+      <h2 id="cb-how"><span data-i18n="How it is scored">How it is scored</span></h2>
+      <p><span data-i18n="The judge is Claude. Code takes 10 frames per second from each video, plus a top-half and a bottom-half crop of every frame, and the judge answers from these frames.">The judge is Claude. Code takes 10 frames per second from each video, plus a top-half and a bottom-half crop of every frame, and the judge answers from these frames.</span></p>
+      <p><span data-i18n="There are 103 questions: 101 are scored and 2 only give information and do not count. 77 of the 103 were written by hand; the rest were written by AI or are unconfirmed readings. Each answer is yes, no, not visible or no judge answer.">There are 103 questions: 101 are scored and 2 only give information and do not count. 77 of the 103 were written by hand; the rest were written by AI or are unconfirmed readings. Each answer is yes, no, not visible or no judge answer.</span></p>
+      <p><span data-i18n="A clip the model did not generate counts as not done in Did the command and is left out of Kept the character. I wrote this rule after the videos were made.">A clip the model did not generate counts as not done in Did the command and is left out of Kept the character. I wrote this rule after the videos were made.</span></p>
+      <p class="mt-note"><span data-i18n="The questions, the answer key, the start image, the videos and the frames are private. If the questions were public, a model or provider could be tuned to their answers. In the open files, questions appear only by ID.">The questions, the answer key, the start image, the videos and the frames are private. If the questions were public, a model or provider could be tuned to their answers. In the open files, questions appear only by ID.</span></p>
+    </section>
+
+    <section class="mt-block" aria-labelledby="cb-results">
+      <h2 id="cb-results"><span data-i18n="Results">Results</span></h2>
+      <p><span data-i18n="Read the two columns separately. They are not added up, and there is no single ranking.">Read the two columns separately. They are not added up, and there is no single ranking.</span></p>
+      <p class="swipe-note"><span data-i18n="Swipe the table sideways to see all columns.">Swipe the table sideways to see all columns.</span></p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Character bench results table" data-i18n-aria-label="Character bench results table">
+        <table class="mt-table">
+          <caption class="sr-only"><span data-i18n="Clips generated, did the command and kept the character per model">Clips generated, did the command and kept the character per model</span></caption>
+          <thead><tr><th scope="col"><span data-i18n="Model">Model</span></th><th scope="col"><span data-i18n="Generated">Generated</span></th><th scope="col"><span data-i18n="Did the command">Did the command</span></th><th scope="col"><span data-i18n="Kept the character">Kept the character</span></th></tr></thead>
+          <tbody>
+<tr><th scope="row">Kling 3.0</th><td>20/20</td><td>100.0% (21/21)</td><td>84.1% (254/302)</td></tr>
+<tr><th scope="row">Wan 3.0</th><td>20/20</td><td>90.9% (20/22)</td><td>92.1% (281/305)</td></tr>
+<tr><th scope="row">Seedance 2.0 Mini</th><td>20/20</td><td>95.5% (21/22)</td><td>96.1% (292/304)</td></tr>
+<tr><th scope="row">Grok Video 1.5 Lite</th><td>20/20</td><td>90.0% (18/20)</td><td>94.3% (248/263)</td></tr>
+<tr><th scope="row">Gemini Omni Flash 1.2</th><td>18/20</td><td>86.4% (19/22)</td><td>90.9% (250/275)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-note"><span data-i18n="In brackets: correct answers over scored answers. The denominators differ between models because of missing judge answers. There was one try per command, so small differences between models were not tested for significance.">In brackets: correct answers over scored answers. The denominators differ between models because of missing judge answers. There was one try per command, so small differences between models were not tested for significance.</span></p>
+      <h3><span data-i18n="Chart">Chart</span></h3>
+      <figure class="mt-chart"><img src="assets/character-bench/grafik.svg" width="1978" height="420" loading="lazy" alt="Bar chart with Turkish labels. Left, on a 0 to 100 percent axis: did the command and kept the character for each of the five models, as separate bars. Right, on its own axis: Higgsfield credits per kept-character answer, from 0.34 for Seedance 2.0 Mini to 0.81 for Gemini Omni Flash 1.2." data-i18n-alt="Bar chart with Turkish labels. Left, on a 0 to 100 percent axis: did the command and kept the character for each of the five models, as separate bars. Right, on its own axis: Higgsfield credits per kept-character answer, from 0.34 for Seedance 2.0 Mini to 0.81 for Gemini Omni Flash 1.2."><figcaption><span data-i18n="Chart labels are in Turkish. Cost is in Higgsfield credits, not converted to USD, and is not part of the score.">Chart labels are in Turkish. Cost is in Higgsfield credits, not converted to USD, and is not part of the score.</span></figcaption></figure>
+    </section>
+
+    <section class="mt-block" aria-labelledby="cb-human">
+      <h2 id="cb-human"><span data-i18n="Human check: did not pass">Human check: did not pass</span></h2>
+      <p><span data-i18n="I scored 20 clips by hand, chosen by code with a fixed seed, without seeing the judge's answers. Human and judge agreed on 80.2% of answers (275/343). The threshold I wrote down in advance was 85%, so the check did not pass.">I scored 20 clips by hand, chosen by code with a fixed seed, without seeing the judge's answers. Human and judge agreed on 80.2% of answers (275/343). The threshold I wrote down in advance was 85%, so the check did not pass.</span></p>
+      <p><span data-i18n="Most of the gap comes from 39 answers the judge never gave in these 20 clips (2 of the 20 got no judge answers at all); each of them counts as a disagreement. Where the judge did answer, agreement is 90.5% (275/304). That is not the number I committed to, so it does not replace 80.2%.">Most of the gap comes from 39 answers the judge never gave in these 20 clips (2 of the 20 got no judge answers at all); each of them counts as a disagreement. Where the judge did answer, agreement is 90.5% (275/304). That is not the number I committed to, so it does not replace 80.2%.</span></p>
+      <p><span data-i18n="So the table above is one judge's reading that matches a human 80.2% of the time. It is not a firm ranking.">So the table above is one judge's reading that matches a human 80.2% of the time. It is not a firm ranking.</span></p>
+      <p class="mt-note"><span data-i18n="Before scoring I had watched about 60 to 70 of the 98 videos, so my answers may have used things the frames do not show, such as motion or sound. The judge saw only frames.">Before scoring I had watched about 60 to 70 of the 98 videos, so my answers may have used things the frames do not show, such as motion or sound. The judge saw only frames.</span></p>
+    </section>
+
+    <section class="mt-block" aria-labelledby="cb-limits">
+      <h2 id="cb-limits"><span data-i18n="Limits">Limits</span></h2>
+      <p><span data-i18n="One character, one start image and one try per command. 20 commands. Three of the five models are cheap tiers. A single frame-based judge, with no second judge.">One character, one start image and one try per command. 20 commands. Three of the five models are cheap tiers. A single frame-based judge, with no second judge.</span></p>
+    </section>
+
+    <section class="mt-block" aria-labelledby="cb-links">
+      <h2 id="cb-links"><span data-i18n="Code and data">Code and data</span></h2>
+      <ul class="mt-links">
+        <li><a href="https://github.com/Biontra/character-consistency-bench" rel="noopener"><span data-i18n="Code on GitHub">Code on GitHub</span></a> <span data-i18n="the code, the rules, the 20 commands, the results and the SHA-256 fingerprints of the private files">the code, the rules, the 20 commands, the results and the SHA-256 fingerprints of the private files</span></li>
+        <li><a href="https://huggingface.co/datasets/Biontra/character-consistency-bench" rel="noopener"><span data-i18n="Dataset on Hugging Face">Dataset on Hugging Face</span></a> <span data-i18n="the page is public; the files open only after I approve an access request, and the license is evaluation only">the page is public; the files open only after I approve an access request, and the license is evaluation only</span></li>
+      </ul>
+    </section>
+  </main>
+  <footer class="wrap mt-foot"><a href="index.html?project=character-bench#projects"><span data-i18n="Back to portfolio">Back to portfolio</span></a> · <a href="#top"><span data-i18n="Back to top">Back to top</span></a></footer>
+</body>
+</html>

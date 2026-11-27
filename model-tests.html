@@ -23,8 +23,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap"></noscript>
-  <link rel="stylesheet" href="style.css?v=step-v1">
-  <script src="i18n.js?v=step-v1" defer></script>
+  <link rel="stylesheet" href="style.css?v=step-v2">
+  <script src="i18n.js?v=step-v2" defer></script>
 </head>
 <body id="top">
   <div class="sitebar">
@@ -110,6 +110,9 @@
       <p class="mt-note"><span data-i18n="The local video tests ran on a 16 GB Mac. AnimateDiff is trained for 16 frames but ran with 8. It finished on the fifth run, which split generation and frame decoding into two processes: the memory watchdog stopped three earlier runs (two on the GPU, one on the CPU while decoding frames) because swap use got too high, one CPU run hit the time limit, and the output is noise. FLUX was never tried.">The local video tests ran on a 16 GB Mac. AnimateDiff is trained for 16 frames but ran with 8. It finished on the fifth run, which split generation and frame decoding into two processes: the memory watchdog stopped three earlier runs (two on the GPU, one on the CPU while decoding frames) because swap use got too high, one CPU run hit the time limit, and the output is noise. FLUX was never tried.</span></p>
       <p><span data-i18n="Best image: SDXL-Turbo (12/20); worst: SDXL base (9/20). No local model wrote &quot;OPEN&quot; correctly, and the best video is Gemini Omni (21/25), a cloud model, ahead of Zeroscope (10/25) and AnimateDiff (7/25). This is one prompt and, for the local models, one seed, so it is not a general ranking.">Best image: SDXL-Turbo (12/20); worst: SDXL base (9/20). No local model wrote "OPEN" correctly, and the best video is Gemini Omni (21/25), a cloud model, ahead of Zeroscope (10/25) and AnimateDiff (7/25). This is one prompt and, for the local models, one seed, so it is not a general ranking.</span></p>
       <p class="mt-note"><span data-i18n="Gemini Omni ran in the Gemini app (Pro subscription) with one try and no seed setting: the sign and the wave are right, the counts are wrong (4 apples and 3 lemons), and cost is 3 because it needs a paid subscription.">Gemini Omni ran in the Gemini app (Pro subscription) with one try and no seed setting: the sign and the wave are right, the counts are wrong (4 apples and 3 lemons), and cost is 3 because it needs a paid subscription.</span></p>
+      <ul class="mt-links">
+        <li><a href="character-bench.html"><span data-i18n="Week 4: character consistency benchmark">Week 4: character consistency benchmark</span></a></li>
+      </ul>
     </section>
   </main>
   <footer class="wrap mt-foot"><a href="index.html?project=model-tests#projects"><span data-i18n="Back to portfolio">Back to portfolio</span></a> · <a href="#top"><span data-i18n="Back to top">Back to top</span></a></footer>

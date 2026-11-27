@@ -579,3 +579,6 @@ html { scroll-padding-top: 96px; }
   .project-step { display: flex; gap: 12px; margin-top: 18px; }
   .project-step .project-button { flex: 1 1 0; min-height: 48px; background: #152338; color: var(--text); cursor: pointer; }
 }
+.mt-chart { margin: 8px 0 0; background: #fff; border: 1px solid var(--line); padding: 8px; overflow-x: auto; }
+.mt-chart img { display: block; width: 100%; min-width: 900px; height: auto; }
+.mt-chart figcaption { color: #444; font-size: 0.85rem; padding-top: 6px; }
