@@ -89,6 +89,21 @@
     share.append(copy, feedback);
     return share;
   }
+  function stepControl() {
+    var nav = el('nav', 'project-step'); nav.setAttribute('aria-label', I.t('Project navigation'));
+    [['prev', 'Previous project', '\u2190', -1], ['next', 'Next project', '\u2192', 1]].forEach(function (spec) {
+      var button = el('button', 'project-button project-step-' + spec[0]); button.type = 'button';
+      var arrow = el('span'); arrow.setAttribute('aria-hidden', 'true'); arrow.textContent = spec[2];
+      var label = el('span', '', spec[1]);
+      if (spec[0] === 'prev') button.append(arrow, label); else button.append(label, arrow);
+      button.addEventListener('click', function () {
+        select((current + spec[3] + tabs.length) % tabs.length, { push: true, user: true });
+        var again = hud.querySelector('.project-step-' + spec[0]); if (again) again.focus({ preventScroll: true });
+      });
+      nav.append(button);
+    });
+    return nav;
+  }
   function makeDemo(slug) {
     var demo = el('section', 'interactive-demo'); demo.dataset.demo = slug;
     var top = el('div', 'demo-heading'); top.append(el('h4', '', 'Interactive demo'), el('span', 'simulation-label', 'Simulation'));
@@ -200,7 +215,7 @@
     if (slug === 'mixen' || slug === 'kilit') {
       var preview = hud.querySelector('.project-preview'); preview.replaceWith(makeDemo(slug));
     }
-    hud.append(shareControl(index));
+    hud.append(shareControl(index), stepControl());
     hud.classList.remove('scan-in');
     if (!reduced.matches) { void hud.offsetWidth; hud.classList.add('scan-in'); }
     focusMap(index);
